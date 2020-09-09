@@ -1,0 +1,42 @@
+.pp-brand-link {
+	overflow: hidden;
+	position: absolute;
+		right: 10px;
+		bottom: 30px;
+
+    * {
+    	text-decoration: none;
+    	transition: all 250ms ease-in-out;
+    }
+
+    a {
+    	display: flex;
+    		align-items: flex-end;
+
+        span {
+        	display: block;
+        	opacity: 0;
+        	padding-right: 5px;
+        	transform: translateX(100%);
+        }
+
+        svg {
+        	height: 25px;
+        	opacity: .2;
+        	width: 25px;
+        }
+
+    }
+
+    &:hover span,
+    &:focus span {
+    	opacity: 1;
+    	transform: translateX(0);
+    }
+
+    &:hover svg,
+    &:focus svg {
+    	opacity: .5;
+    }
+
+}

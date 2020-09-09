@@ -1,0 +1,221 @@
+Preparation:
+  ☐ Setup existing site on Google Analytics
+  ☐ Setup existing site on Google Search Console
+  ☐ Submit existing sitemap to Google Search Console
+  ☐ Get list of blog categories
+  ☐ Get default blog category
+  ☐ Get access to existing site
+  ☐ Get clarification on existing plugins
+  ☐ Get details for forms
+  ☐ Get login for email marketing system
+
+Planning:
+  ☐ Content to migrate
+  ☐ Redirection spreadsheet
+  ☐ Custom block styles
+  ☐ Default block extensions
+  ☐ Custom block patterns
+  ☐ Custom blocks
+  ☐ Image sizes
+  ☐ ACF usage
+  ☐ Menu names and locations
+  ☐ Editor font sizes
+  ☐ Editor color palette
+  ☐ Widget areas
+  ☐ Page layouts
+  ☐ Blog categories
+  ☐ Default blog category
+  ☐ Email marketing system
+
+Local Setup:
+  ☐ Create new site on Local using Blueprint
+  ☐ Activate default plugins
+      ☐ Auto Image Attributes from Filename with Bulk Updater
+      ☐ Genesis Visual Hook Guide
+      ☐ Rebusted
+      ☐ Regenerate Thumbnails
+      ☐ Safe SVG
+      ☐ WordPress Importer
+
+Theme Setup:
+  ☐ Copy KYOSA Theme
+  ☐ Find/replace theme name
+  ☐ Modify inc/config.php
+  ☐ Install and activate Genesis framework
+  ☐ Install and activate child theme
+  ☐ Import test data
+  ☐ Add logo
+  ☐ Add favicon
+  ☐ Set comment preferences
+
+SiteGround Setup:
+  ☐ Create sub-domain
+  ☐ Add SSL certificate
+  ☐ Install WordPress
+  ☐ Disable caching
+
+WordPress Setup:
+  ☐ Set blog title and tagline
+  ☐ Set date and time
+  ☐ Set permalinks (check existing site)
+  ☐ Set media file structure (check existing site)
+  ☐ Check the "Discourage search engines from indexing site" box
+  ☐ Create blog categories
+  ☐ Select default blog category
+  ☐ Create primary pages
+  ☐ Create menu(s)
+  ☐ Import existing content, plugins, and data
+
+Basic Theme Development:
+  ☐ Create custom post types and taxonomies
+  ☐ Create custom fields
+  ☐ Create layouts for custom fields
+  ☐ Confirm all components are displaying
+      ☐ Header
+      ☐ Footer
+      ☐ Page
+      ☐ Blog
+      ☐ Category
+      ☐ Search
+      ☐ Post
+      ☐ Custom post types
+      ☐ Default blocks
+  ☐ Add styling
+      ☐ Default styles (body, headings, buttons, forms, layout)
+      ☐ Header
+      ☐ Footer
+      ☐ Page
+      ☐ Blog
+      ☐ Category
+      ☐ Search
+      ☐ Post
+      ☐ Custom post types
+      ☐ Default blocks
+  ☐ Confirm editor styling
+  ☐ Fix any items marked in the code
+
+Block Development:
+  ☐ Remove default block styles
+  ☐ Add custom block styles
+  ☐ Add styling (front-end and editor) for custom block styles
+  ☐ Add custom block patterns
+  ☐ Add styling (front-end and editor) for custom block patterns
+  ☐ Add extended functionality to default blocks
+  ☐ Add styling (front-end and editor) for extended functionality
+  ☐ Add custom blocks
+  ☐ Add styling (front-end and editor) for custom blocks
+  ☐ Fix any items marked in the code
+
+Site Build-out:
+  ☐ Create all mock-up pages using blocks
+  ☐ Modify styling as needed
+  ☐ Add content from client
+  ☐ Activate standard plugins
+      ☐ Antispam Bee
+      ☐ Cookie Notice for GDPR & CCPA
+      ☐ Indicate External Links
+      ☐ Redirection
+      ☐ Smush
+      ☐ WP Retina 2x
+      ☐ WP Sitemap Page
+      ☐ WP101
+      ☐ Yoast SEO
+  ☐ Setup cookie notice
+  ☐ Setup Smush
+  ☐ Setup WP Retina
+  ☐ Create sitemap page
+  ☐ Activate and setup common plugins
+      ☐ GTranslate
+      ☐ Official Facebook Pixel
+
+QA:
+  ☐ Mock-up pages
+  ☐ Header
+  ☐ Footer
+  ☐ Category
+  ☐ Search
+  ☐ Search results
+  ☐ Custom post type archives
+  ☐ Default blocks
+  ☐ Pagination
+  ☐ Breadcrumbs
+
+Testing:
+  ☐ Accessibility
+      ☐ WAVE Accessibility Tester
+      ☐ P&P Checklist - Initial Dev Check
+  ☐ Windows/Chrome
+  ☐ Windows/Firefox
+  ☐ Windows/Edge
+  ☐ Windows/IE
+  ☐ Mac/Chrome
+  ☐ Mac/Firefox
+  ☐ Mac/Safari
+  ☐ iPhone/Safari
+  ☐ iPhone/Chrome
+  ☐ Android/Chrome
+  ☐ Revise and re-test
+
+Review:
+  ☐ Install WP Feedback
+  ☐ Revise as necessary
+
+Launch Prep:
+  ☐ Add final content
+  ☐ Change theme screenshot
+  ☐ Transfer site to Flywheel
+  ☐ Accessibility testing (P&P Checklist - Final Launch Check)
+  ☐ Setup redirects
+  ☐ Setup Yoast SEO
+  ☐ Remove unused plugins and themes
+  ☐ Update plugins, themes, and core
+  ☐ QA
+      ☐ Confirm newsletter form(s) are properly set up
+      ☐ Confirm contact form(s) are properly set up
+      ☐ Confirm social icons are properly linked
+      ☐ Confirm social sharing works as expected
+      ☐ Confirm privacy policy exists and is linked
+      ☐ Confirm terms & conditions exists and is linked
+      ☐ Confirm all copy is up-to-date
+      ☐ Confirm all images have alt text
+      ☐ Confirm page title & descriptoin have been added via Yoast
+      ☐ Confirm descriptive headings have been used to break up content
+      ☐ Confirm all additional funcionality works as expected (links, anchor links, etc.)
+      ☐ Confirm links are composed of descriptive anchor text (not "click here")
+      ☐ Confirm contact details are correct (contact page, footer, etc.)
+
+Launch:
+  ☐ Backup old site
+  ☐ Connect domain to Flywheel
+      ☐ Setup DNS
+      ☐ Setup SSL
+      ☐ Setup CDN
+  ☐ Migrate new website
+  ☐ Setup Google Search Console on new domain
+      ☐ Submit site map for new sitemap
+      ☐ Submit change address process in Google Search Console
+      ☐ Add site to Bing Webmaster
+  ☐ Redirect old domain to new domain
+  ☐ Modify WP admin settings
+      ☐ Change site administrator
+      ☐ Add user(s)
+      ☐ Add Google Analytics script to header
+      ☐ Confirm all premium plugins have licenses
+      ☐ Uncheck the "Discourage search engines from indexing site" box
+  ☐ Check for broken links
+  ☐ Test social sharing apearance
+  ☐ Test newsletter form(s)
+  ☐ Test contact form(s)
+      ☐ CAPTCHA
+      ☐ Notifications
+
+Post-launch:
+  ☐ Monitor 404 errors
+
+------------------------------------------------------------------------------------------------------------
+ctrl-enter: add a new todo item below the current
+ctrl-shift-enter: add a new todo item above the current
+ctrl-d: toggle completion of the task
+ctrl-shift-a: move all completed tasks to the archive section
+alt-c: cancel the selected tasks
+ctrl-shift-s: add/update timestamp for current task
