@@ -8,7 +8,7 @@
 **/
 
 
-if( $config[ 'acf-options-page' ] === true ) {
+if( $kyosa_config[ 'acf-options-page' ] === true ) {
 
   if( function_exists( 'acf_add_options_page' ) ) {
 

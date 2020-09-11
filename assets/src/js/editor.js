@@ -23,3 +23,15 @@ registerBlockStyle( 'core/spacer', {
   label: 'Reduce Height on Mobile',
   isDefault: true,
 } );
+
+registerBlockStyle( 'core/paragraph', [
+  {
+    name: 'sans-serif',
+    label: 'Sans-Serif',
+    isDefault: true,
+  },
+  {
+    name: 'serif',
+    label: 'Serif',
+  },
+] );

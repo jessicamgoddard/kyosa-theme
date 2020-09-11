@@ -1,34 +1,34 @@
 Preparation:
-  ☐ Setup existing site on Google Analytics
+  ✔ Setup existing site on Google Analytics @done(2020-09-11 09:53) @project(Preparation)
   ☐ Setup existing site on Google Search Console
   ☐ Submit existing sitemap to Google Search Console
-  ☐ Get list of blog categories
-  ☐ Get default blog category
-  ☐ Get access to existing site
-  ☐ Get clarification on existing plugins
+  ✔ Get list of blog categories @done(2020-09-11 10:42) @project(Preparation)
+  ✔ Get default blog category @done(2020-09-11 10:42) @project(Preparation)
+  ✔ Get access to existing site @done(2020-09-11 10:03) @project(Preparation)
+  ✔ Get clarification on existing plugins @done(2020-09-11 10:03) @project(Preparation)
   ☐ Get details for forms
   ☐ Get login for email marketing system
 
 Planning:
   ☐ Content to migrate
-  ☐ Redirection spreadsheet
-  ☐ Custom block styles
-  ☐ Default block extensions
-  ☐ Custom block patterns
+  ✔ Redirection spreadsheet @done(2020-09-11 10:03) @project(Planning)
+  ✔ Custom block styles @done(2020-09-11 10:03) @project(Planning)
+  ✔ Default block extensions @done(2020-09-11 10:03) @project(Planning)
+  ✔ Custom block patterns @done(2020-09-11 10:31) @project(Planning)
   ☐ Custom blocks
-  ☐ Image sizes
-  ☐ ACF usage
-  ☐ Menu names and locations
-  ☐ Editor font sizes
-  ☐ Editor color palette
-  ☐ Widget areas
-  ☐ Page layouts
+  ✔ Image sizes @done(2020-09-11 10:38) @project(Planning)
+  ✔ ACF usage @done(2020-09-11 10:32) @project(Planning)
+  ✔ Menu names and locations @done(2020-09-11 10:32) @project(Planning)
+  ✔ Editor font sizes @done(2020-09-11 10:32) @project(Planning)
+  ✔ Editor color palette @done(2020-09-11 10:34) @project(Planning)
+  ✔ Widget areas @done(2020-09-11 10:42) @project(Planning)
+  ✔ Page layouts @done(2020-09-11 10:42) @project(Planning)
   ☐ Blog categories
   ☐ Default blog category
   ☐ Email marketing system
 
 Local Setup:
-  ☐ Create new site on Local using Blueprint
+  ✔ Create new site on Local using Blueprint @done(2020-09-11 10:42) @project(Local Setup)
   ☐ Activate default plugins
       ☐ Auto Image Attributes from Filename with Bulk Updater
       ☐ Genesis Visual Hook Guide
