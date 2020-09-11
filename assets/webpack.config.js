@@ -2,7 +2,7 @@ const path = require( 'path' );
 const MiniCssExtractPlugin = require( 'mini-css-extract-plugin' );
 const UglifyJSPlugin = require( 'uglifyjs-webpack-plugin' );
 const OptimizeCssAssetsPlugin = require( 'optimize-css-assets-webpack-plugin' );
-const BrowserSyncPlugin = require( 'browser-sync-webpack-plugin' );
+// const BrowserSyncPlugin = require( 'browser-sync-webpack-plugin' );
 // const StyleLintPlugin = require( 'stylelint-webpack-plugin' );
 
 module.exports = {
@@ -53,12 +53,6 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: './[name].min.css'
     }),
-    new BrowserSyncPlugin({
-      files: '**/*.php',
-      host: 'localhost',
-      port: 3000,
-      proxy: 'http://kyosa-site.test/'
-    })
   ],
   optimization: {
     minimizer: [
