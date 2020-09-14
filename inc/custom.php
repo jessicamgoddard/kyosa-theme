@@ -7,6 +7,77 @@
  * @since        1.0.0
 **/
 
+// Adds search to secondary navigation
+add_filter( 'wp_nav_menu_items', 'kyosa_add_search_to_menu', 10, 2 );
+function kyosa_add_search_to_menu( $menu, $args ) {
+
+  if( ( 'secondary' !== $args->theme_location ) )
+    return $menu;
+
+  ob_start();
+  get_search_form();
+  $search = ob_get_clean();
+  $menu .= '<li class="search">' . $search . '</li>';
+
+  return $menu;
+
+}
+
+// Shared function for displaying categories with colors
+function kyosa_categories_with_colors() {
+  ?>
+  <p class="entry-meta">
+    <span class="entry-categories">
+      <?php
+      $cats = get_the_category();
+      foreach( $cats as $cat ) :
+        ?>
+        <a class="has-<?= get_field( 'color', 'category_' . $cat->term_id ) ?>-category-color" href="<?= esc_url( get_category_link( $cat->term_id ) ) ?>"><?= esc_html( $cat->name ) ?></a>
+      <?php endforeach; ?>
+    </span>
+  </p>
+  <?php
+}
+
+// Adds hero image to page and posts
+add_action( 'genesis_entry_header', 'kyosa_add_page_post_hero_image', 5 );
+function kyosa_add_page_post_hero_image() {
+
+  if( ( is_page() || is_singular() ) && has_post_thumbnail() ) :
+    ?>
+    <div class="page-hero">
+      <div class="page-hero--image" style="background-image: url('<?= get_the_post_thumbnail_url() ?>')">
+
+        <?php if( get_field( 'headline' ) ) : ?>
+          <div class="page-hero--headline">
+            <p><?= get_field( 'headline' ) ?></p>
+          </div>
+        <?php endif; ?>
+
+        <?php if( is_singular() && get_the_category() ) :?>
+          <div class="page-hero--meta">
+            <?= kyosa_categories_with_colors() ?>
+          </div>
+        <?php endif; ?>
+
+        <?= get_the_post_thumbnail() ?>
+      </div>
+    </div>
+    <?php
+  endif;
+}
+
+// Adds page color body class
+add_filter( 'body_class', 'kyosa_page_color_body_class' );
+function kyosa_page_color_body_class( $classes ) {
+
+  if( get_field( 'color' ) ) :
+	  $classes[] = 'has-' . get_field( 'color') . '-page-color';
+  endif;
+
+	return $classes;
+}
+
 /* Genesis */
 // Remove Genesis SEO settings from post/page editor
 remove_action( 'admin_menu', 'genesis_add_inpost_seo_box' );
@@ -16,6 +87,19 @@ remove_theme_support( 'genesis-seo-settings-menu' );
 
 // Remove Genesis SEO settings from taxonomy editor
 remove_action( 'admin_init', 'genesis_add_taxonomy_seo_options' );
+
+// Moves navigation menus
+remove_action( 'genesis_after_header', 'genesis_do_nav' );
+remove_action( 'genesis_after_header', 'genesis_do_subnav' );
+add_action( 'genesis_header', 'genesis_do_subnav' );
+add_action( 'genesis_header', 'genesis_do_nav' );
+
+// Adds footer widgets
+$footer_widgets = $kyosa_config[ 'genesis-footer-widgets' ];
+
+if( $footer_widgets != 0 ) :
+  add_theme_support( 'genesis-footer-widgets', $footer_widgets );
+endif;
 
 
 /* Gutenberg */

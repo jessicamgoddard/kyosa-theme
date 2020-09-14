@@ -29,7 +29,8 @@ function kyosa_config() {
     'responsive-menus'             => [
       'script'  => [
         'menuClasses' => [
-          'others'  => [ '.nav-primary', '.nav-secondary' ],
+          // 'others'  => [ '.nav-primary' ],
+          'combine'  => [ '.nav-primary', '.nav-secondary' ],
         ]
       ],
       'extras'  => [
