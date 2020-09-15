@@ -7,6 +7,26 @@
  * @since        1.0.0
 **/
 
+// Adds class to navigation
+add_filter( 'wp_nav_menu_objects', 'kyosa_add_menu_item_class' );
+function kyosa_add_menu_item_class( $items ) {
+
+  foreach( $items as &$item ) {
+
+    $color = get_field( 'color', $item->object_id );
+
+    if( $color ) {
+
+      $item->classes[] = 'has-' . $color . '-page-color';
+
+    }
+
+  }
+
+  return $items;
+
+}
+
 // Adds search to secondary navigation
 add_filter( 'wp_nav_menu_items', 'kyosa_add_search_to_menu', 10, 2 );
 function kyosa_add_search_to_menu( $menu, $args ) {
@@ -17,6 +37,7 @@ function kyosa_add_search_to_menu( $menu, $args ) {
   ob_start();
   get_search_form();
   $search = ob_get_clean();
+  $menu .= '<li class="search-toggle"><span class="dashicons dashicons-search"></span></li>';
   $menu .= '<li class="search">' . $search . '</li>';
 
   return $menu;

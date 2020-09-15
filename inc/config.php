@@ -9,8 +9,10 @@
 
 function kyosa_config() {
 
+  $menu_icon = '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 40 40" style="enable-background:new 0 0 40 40;" xml:space="preserve"><style type="text/css">.st0{fill:none;stroke:#679633;stroke-width:3;}.st1{fill:none;stroke:#D5161D;stroke-width:3;}.st2{fill:none;stroke:#337FD0;stroke-width:3;}.st3{fill:none;stroke:#F1CA4C;stroke-width:3;}</style><g id="bars">	<path class="st0" d="M2,38h36"/><path class="st1" d="M2,26h36"/><path class="st2" d="M2,14h36"/><path class="st3" d="M2,2h36"/></g><g id="x"><path class="st0" d="M21.1,21.1l17.8,17.8"/><path class="st1" d="M1.1,38.9L19,21"/><path class="st2" d="M21.1,18.9L38.9,1.1"/><path class="st3" d="M1.1,1.1l17.8,17.8"/></g></svg>';
+
   return [
-    'fonts-url'         => null,
+    'fonts-url'         => 'https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700;800&family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap',
     'acf-options-page'  => false,
     'image-sizes'       => [
       [
@@ -28,9 +30,10 @@ function kyosa_config() {
     ],
     'responsive-menus'             => [
       'script'  => [
+        'mainMenu'    => $menu_icon . __( 'Menu' ),
         'menuClasses' => [
           // 'others'  => [ '.nav-primary' ],
-          'combine'  => [ '.nav-primary', '.nav-secondary' ],
+          'combine'  => [ '.nav-secondary', '.nav-primary' ],
         ]
       ],
       'extras'  => [
@@ -56,13 +59,13 @@ function kyosa_config() {
         [
           'name'        => __( 'Small' ),
           'shortName'   => __( 'S' ),
-          'size'        => 12,
+          'size'        => 14,
           'slug'        => 'small',
         ],
         [
           'name'        => __( 'Normal' ),
           'shortName'   => __( 'M' ),
-          'size'        => 16,
+          'size'        => 18,
           'slug'        => 'normal',
         ],
         [
