@@ -1,5 +1,11 @@
-@import 'partials/base';
+// Standard styles
 @import 'partials/reset';
 @import 'partials/defaults';
+// Mixins, etc.
+@import 'partials/base';
+// Other styles
+@import 'partials/layout';
+@import 'partials/header';
 @import 'partials/blocks';
+@import 'partials/footer';
 @import 'partials/pandp';

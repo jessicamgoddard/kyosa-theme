@@ -1055,6 +1055,19 @@ figcaption,
   ul {
     page-break-before: avoid; } }
 
+.wrap {
+  margin: 0 auto;
+  max-width: 56.25rem; }
+
+.site-header .wrap {
+  max-width: unset;
+  padding: 0.9375rem; }
+
+@media only screen and (min-width: 60em) {
+  .site-header .wrap {
+    padding-left: 9.375rem;
+    padding-right: 9.375rem; } }
+
 .pp-brand-link {
   overflow: hidden;
   position: absolute;

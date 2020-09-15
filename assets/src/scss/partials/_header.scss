@@ -1,0 +1,21 @@
+.site-header {
+
+  .wrap {
+    max-width: unset;
+    padding: $px-15-to-rem;
+  }
+
+}
+
+@media only screen and (min-width: $standard-breakpoint) {
+
+  .site-header {
+
+    .wrap {
+      padding-left: $px-150-to-rem;
+      padding-right: $px-150-to-rem;
+    }
+
+  }
+
+}
