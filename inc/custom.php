@@ -8,8 +8,8 @@
 **/
 
 // Adds class to navigation
-add_filter( 'wp_nav_menu_objects', 'kyosa_add_menu_item_class' );
-function kyosa_add_menu_item_class( $items ) {
+add_filter( 'wp_nav_menu_objects', 'kyosa_add_menu_item_class', 10, 2 );
+function kyosa_add_menu_item_class( $items, $args ) {
 
   foreach( $items as &$item ) {
 

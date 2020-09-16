@@ -88,40 +88,79 @@
             display: block;
           }
 
+          // & + .menu-item {
+          //   margin-top: $px-30-to-rem;
+          // }
+
         }
 
         .menu-item.moved-item-nav-primary {
-          flex-basis: 100%;
+          flex-basis: 100vw;
           font-size: 1.688rem;
           font-weight: 700;
-          margin-bottom: $px-15-to-rem;
+          margin: 0 $px-neg-30-to-rem;
+          padding: $px-15-to-rem $px-30-to-rem;
           text-align: right;
 
-          a {
-            border-bottom: 0.1875rem solid $black;
-            color: $black;
+          &.has-active-sub-menu {
+            background-color: #F4F4F4;
           }
 
-          &.menu-item-has-children a {
-            padding-right: 2.5rem;
+          a {
+            display: flex;
+              justify-content: flex-end;
+
+            span {
+              border-bottom: 0.1875rem solid $black;
+              color: $black;
+              padding-bottom: 0.625rem;
+            }
+
+          }
+
+          &.menu-item-has-children a span {
+            padding-right: $px-15-to-rem;
           }
 
           .sub-menu-toggle {
+            color: #C7C7C7;
             flex-shrink: 0;
             padding: 0;
-            top: 0.3125rem;
-            width: 2.5rem;
+            top: 2.5rem;
+            right: 0.625rem;
+            width: $px-30-to-rem;
 
             &:before {
-              font-size: 2.5rem;
-              height: 2.5rem;
-              width: 2.5rem;
+              font-size: $px-30-to-rem;
+              height: $px-30-to-rem;
+              width: $px-30-to-rem;
             }
 
           }
 
           .sub-menu {
-            
+
+            .menu-item {
+              border-bottom: 1px solid #C7C7C7;
+              font-size: 1rem;
+              text-transform: uppercase;
+
+              &:last-child {
+                border-bottom: 0;
+              }
+
+              a {
+                background-color: transparent;
+                padding-right: 0.3125rem;
+
+                span {
+                  border-bottom: 0;
+                }
+
+              }
+
+            }
+
           }
 
         }
