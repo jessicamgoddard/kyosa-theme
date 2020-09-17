@@ -12,11 +12,12 @@
 require_once get_template_directory() . '/lib/init.php';
 
 // Loads configuration options
-require_once get_stylesheet_directory() . '/inc/config.php';
-$kyosa_config = kyosa_config();
+// require_once get_stylesheet_directory() . '/inc/config.php';
 
 // Loads scripts and styles
 require_once get_stylesheet_directory() . '/inc/scripts-styles.php';
+// Adds programmatic inline CSS
+require_once get_stylesheet_directory() . '/inc/inline-css.php';
 // Sets up theme supports
 require_once get_stylesheet_directory() . '/inc/theme-supports.php';
 // Makes changes to default Genesis set up

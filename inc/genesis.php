@@ -11,6 +11,8 @@
 // Registers the responsive menus
 if ( function_exists( 'genesis_register_responsive_menus' ) ) {
 
+	$kyosa_config = genesis_get_config( 'main' );
+
 	genesis_register_responsive_menus( $kyosa_config[ 'responsive-menus' ] );
 
 }
@@ -18,6 +20,8 @@ if ( function_exists( 'genesis_register_responsive_menus' ) ) {
 // Reduces secondary navigation to one level depth
 add_filter( 'wp_nav_menu_args', 'kyosa_secondary_menu_args' );
 function kyosa_secondary_menu_args( $args ) {
+
+	$kyosa_config = genesis_get_config( 'main' );
 
   if( $kyosa_config[ 'reduce-secondary-nav' ] === true && 'secondary' === $args['theme_location'] ) {
 
@@ -33,6 +37,8 @@ function kyosa_secondary_menu_args( $args ) {
 add_filter( 'genesis_site_title_wrap', function( $wrap ) { return is_front_page() ? 'h1' : $wrap; } );
 
 // Removes sidebars
+$kyosa_config = genesis_get_config( 'main' );
+
 $sidebars = $kyosa_config[ 'remove-sidebars' ];
 
 if( $sidebars !== null ) {
@@ -46,6 +52,8 @@ if( $sidebars !== null ) {
 }
 
 // Removes page layouts
+$kyosa_config = genesis_get_config( 'main' );
+
 $layouts = $kyosa_config[ 'remove-layouts' ];
 
 if( $layouts !== null ) {
@@ -59,6 +67,8 @@ if( $layouts !== null ) {
 }
 
 // Force full-width layout
+$kyosa_config = genesis_get_config( 'main' );
+
 $force_full_width = $kyosa_config[ 'force-full-width' ];
 
 if( $force_full_width === true ) {

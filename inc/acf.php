@@ -7,6 +7,7 @@
  * @since        1.0.0
 **/
 
+$kyosa_config = genesis_get_config( 'main' );
 
 if( $kyosa_config[ 'acf-options-page' ] === true ) {
 

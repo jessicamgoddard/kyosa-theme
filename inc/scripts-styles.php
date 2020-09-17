@@ -7,10 +7,11 @@
  * @since        1.0.0
 **/
 
-
 // Enqueues main scripts and styles
 add_action( 'wp_enqueue_scripts', 'kyosa_scripts_styles' );
 function kyosa_scripts_styles() {
+
+  $kyosa_config = genesis_get_config( 'main' );
 
   wp_enqueue_style( 'kyosa-theme-fonts', $kyosa_config[ 'fonts-url' ] );
   wp_enqueue_style( 'dashicons' );
@@ -23,6 +24,8 @@ function kyosa_scripts_styles() {
 // Enqueues Gutenberg scripts and styles
 add_action( 'enqueue_block_editor_assets', 'kyosa_gutenberg_scripts_styles' );
 function kyosa_gutenberg_scripts_styles() {
+
+  $kyosa_config = genesis_get_config( 'main' );
 
   wp_enqueue_style( 'kyosa-theme-editor-fonts', $kyosa_config[ 'fonts-url' ] );
   wp_enqueue_style( 'dashicons' );

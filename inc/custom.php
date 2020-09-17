@@ -116,6 +116,7 @@ add_action( 'genesis_header', 'genesis_do_subnav' );
 add_action( 'genesis_header', 'genesis_do_nav' );
 
 // Adds footer widgets
+$kyosa_config = genesis_get_config( 'main' );
 $footer_widgets = $kyosa_config[ 'genesis-footer-widgets' ];
 
 if( $footer_widgets != 0 ) :

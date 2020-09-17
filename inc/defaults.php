@@ -9,7 +9,9 @@
 
 
 // Sets custom image sizes
+$kyosa_config = genesis_get_config( 'main' );
 $image_sizes = $kyosa_config[ 'image-sizes' ];
+
 if( $image_sizes ) {
 
   foreach( $image_sizes as $image_size ) {
