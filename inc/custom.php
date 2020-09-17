@@ -66,17 +66,17 @@ function kyosa_add_page_post_hero_image() {
 
   if( ( is_page() || is_singular() ) && has_post_thumbnail() ) :
     ?>
-    <div class="page-hero">
-      <div class="page-hero--image" style="background-image: url('<?= get_the_post_thumbnail_url() ?>')">
+    <div class="page-hero alignwide">
+      <div class="page-hero__image" style="background-image: url('<?= get_the_post_thumbnail_url() ?>')">
 
         <?php if( get_field( 'headline' ) ) : ?>
-          <div class="page-hero--headline">
+          <div class="page-hero__headline">
             <p><?= get_field( 'headline' ) ?></p>
           </div>
         <?php endif; ?>
 
         <?php if( is_singular() && get_the_category() ) :?>
-          <div class="page-hero--meta">
+          <div class="page-hero__meta">
             <?= kyosa_categories_with_colors() ?>
           </div>
         <?php endif; ?>

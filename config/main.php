@@ -36,7 +36,7 @@
         ]
       ],
       'extras'  => [
-        'media_query_width' => '960px',
+        'media_query_width' => '900px',
       ],
     ],
     'reduce-secondary-nav'        => true,

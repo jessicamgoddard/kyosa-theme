@@ -56,6 +56,10 @@ function kyosa_custom_gutenberg_css() {
       border-color: {$color['color']} !important;
     }
 
+    body.has-{$color['slug']}-page-color h1.entry-title {
+      background-color: {$color['color']};
+    }
+
 CSS;
 
   }

@@ -1,18 +1,29 @@
+.site-header {
+  background-color: #fff;
+}
+
 .site-header .wrap {
+  margin: 0;
   max-width: unset;
-  padding: $px-15-to-rem;
+  padding: 15px;;
 
   .title-area {
     float: left;
-    width: calc( 100% - 4.3275rem );
+    width: calc( 100% - 5rem );
   }
 
   .menu-toggle {
+    background-color: #fff;
+    border-radius: $px-30-to-rem 0 0 $px-30-to-rem;
     font-size: 0;
     height: 4.375rem;
     margin: 0;
     padding: $px-15-to-rem;
+    position: fixed;
+      top: 15px;
+      right: 0;
     width: 4.375rem;
+    z-index: 999;
 
     &::before {
       content: '';
@@ -39,10 +50,17 @@
 
 }
 
+.admin-bar .menu-toggle {
+  top: 47px !important;
+}
+
+.admin-bar .nav-secondary {
+  top: 115px !important;
+}
+
 /* Shared menu styles */
 .site-header .genesis-responsive-menu {
   font-size: 0;
-  min-height: calc( 100vh - 1.875rem );
 
   .menu {
     display: flex;
@@ -59,6 +77,13 @@
 
 /* Secondary menu styles */
 .site-header .nav-secondary {
+  background-color: #fff;
+  overflow: scroll;
+  position: fixed;
+    top: 85px;
+    left: 0;
+    bottom: 0;
+  z-index: 998;
 
   .menu-item,
   .menu-item:not(.moved-item-nav-primary) {
@@ -105,8 +130,19 @@
       display: block;
     }
 
-    input[type="submit"] {
-      margin: 0 $px-15-to-rem;
+    form {
+      display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+      input[type="search"] {
+        margin: 0 $px-15-to-rem 0 0;
+      }
+
+      input[type="submit"] {
+        margin-bottom: 10px;
+      }
+
     }
 
   }
@@ -120,7 +156,7 @@
   flex-basis: 100vw;
   font-size: 1.688rem;
   font-weight: 700;
-  margin: $px-15-to-rem $px-neg-30-to-rem 0;
+  margin: $px-15-to-rem $px-neg-15-to-rem 0;
   text-align: right;
   text-transform: none;
 
@@ -217,9 +253,24 @@
 
 @media only screen and (min-width: $standard-breakpoint) {
 
+  .site-header {
+    padding-bottom: $px-15-to-rem;
+    position: sticky;
+      top: 0;
+    z-index: 999;
+  }
+
+  .admin-bar .site-header {
+    top: 0;
+  }
+
+  .admin-bar .nav-secondary {
+    top: 0 !important;
+  }
+
   .site-header > .wrap {
-    padding-left: $px-150-to-rem;
-    padding-right: $px-150-to-rem;
+    padding-left: $px-30-to-rem;
+    padding-right: $px-30-to-rem;
 
     .title-area {
       width: auto;
@@ -239,6 +290,9 @@
 
     .nav-secondary {
       margin-bottom: $px-30-to-rem;
+      overflow: visible;
+      position: relative;
+        top: 0;
 
       .menu {
         align-items: flex-end;
@@ -260,7 +314,7 @@
 
         .search {
           display: block;
-          margin-bottom: .5rem;
+          margin-bottom: 0;
           overflow: hidden;
           width: 0;
 
@@ -269,8 +323,7 @@
           }
 
           form {
-            display: flex;
-              align-items: center;
+            flex-wrap: nowrap;
           }
 
         }
@@ -332,6 +385,15 @@
 
     }
 
+  }
+
+}
+
+@media only screen and (min-width: $wide-breakpoint) {
+
+  .site-header > .wrap {
+    padding-left: $px-150-to-rem;
+    padding-right: $px-150-to-rem;
   }
 
 }

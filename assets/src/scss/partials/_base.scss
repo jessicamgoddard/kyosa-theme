@@ -14,9 +14,25 @@ $width-full: 100vw;
 
 // Translated units
 $px-15-to-rem: 0.9375rem;
+$px-neg-15-to-rem: -0.9375rem;
 $px-30-to-rem: 1.875rem;
 $px-neg-30-to-rem: -1.875rem;
+$px-60-to-rem: 3.75rem;
 $px-150-to-rem: 9.375rem;
+$px-neg-150-to-rem: -9.375rem;
+
+// Font sizes
+$font-size-h1: 4.188rem;
+$font-size-h2: 3.125rem;
+$font-size-h3: 2.313rem;
+$font-size-h4: 1.75rem;
+$font-size-h5: 1.313rem;
+$font-size-h6: 1rem;
+
+// Font families
+$roboto: 'Roboto', sans-serif;
+$roboto-slab: 'Roboto Slab', serif;
 
 // Media query
-$standard-breakpoint: 60em;
+$standard-breakpoint: 56.25rem;
+$wide-breakpoint: 75rem;

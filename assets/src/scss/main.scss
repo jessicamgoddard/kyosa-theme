@@ -4,9 +4,10 @@
 // Mixins, etc.
 @import 'partials/base';
 // Other styles
-@import 'partials/layout';
-@import 'partials/header';
+@import 'partials/global';
 @import 'partials/forms';
+@import 'partials/site-header';
+@import 'partials/page-header';
 @import 'partials/blocks';
-@import 'partials/footer';
+@import 'partials/site-footer';
 @import 'partials/pandp';

@@ -70,8 +70,8 @@ function kyosa_add_archive_hero_image() {
 
   if( has_post_thumbnail( $blog_id ) && !is_search() ) :
     ?>
-    <div class="page-hero">
-      <div class="page-hero--image" style="background-image: url('<?= get_the_post_thumbnail_url( $blog_id ) ?>')">
+    <div class="page-hero alignwide">
+      <div class="page-hero__image" style="background-image: url('<?= get_the_post_thumbnail_url( $blog_id ) ?>')">
         <?= get_the_post_thumbnail( $blog_id ) ?>
       </div>
     </div>

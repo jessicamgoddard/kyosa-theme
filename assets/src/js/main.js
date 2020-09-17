@@ -1,3 +1,19 @@
+// Caluclate hero height
+const setHeroHeight = () => {
+
+  const siteHeader = document.querySelector( '.site-header' );
+  const pageHeroImage = document.querySelector( '.page-hero__image' );
+
+  if( pageHeroImage ) {
+
+    const headerHeight = siteHeader.offsetHeight;
+
+    pageHeroImage.style.minHeight = 'calc( 100vh - ' + headerHeight + 'px - 60px )';
+
+  }
+
+}
+
 // Toggle search form display
 const toggleSearchForm = () => {
 
@@ -64,6 +80,7 @@ const activeSubMenu = () => {
 }
 
 window.addEventListener( 'load', () => {
+  setHeroHeight();
   toggleSearchForm();
   activeSubMenu();
 } );
