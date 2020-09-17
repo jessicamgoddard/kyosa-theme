@@ -63,7 +63,7 @@
   .menu-item,
   .menu-item:not(.moved-item-nav-primary) {
     border-bottom: 1px solid $black;
-    font-size: 0.875rem;
+    font-size: 1rem;
     font-weight: 500;
     margin-bottom: $px-15-to-rem;
     text-transform: lowercase;
@@ -89,7 +89,7 @@
     text-align: right;
 
     .dashicons {
-      font-size: 2.5rem;
+      font-size: 2.125rem;
       height: 2.5rem;
       width: 2.5rem;
     }
@@ -103,6 +103,10 @@
 
     &.is-active {
       display: block;
+    }
+
+    input[type="submit"] {
+      margin: 0 $px-15-to-rem;
     }
 
   }

@@ -27,6 +27,22 @@ function kyosa_custom_gutenberg_css() {
       background-color: {$color['color']};
     }
 
+    /* Button Colors */
+    .wp-block-button__link.has-{$color['slug']}-background-color {
+      background-color: transparent;
+      border-color: {$color['color']};
+    }
+
+    .wp-block-button:not(.is-style-underscore) .wp-block-button__link.has-{$color['slug']}-background-color:hover,
+    .wp-block-button:not(.is-style-underscore) .wp-block-button__link.has-{$color['slug']}-background-color:focus {
+      background-color: {$color['color']};
+    }
+
+    .is-style-underscore .wp-block-button__link.has-{$color['slug']}-color:hover,
+    .is-style-underscore .wp-block-button__link.has-{$color['slug']}-color:focus {
+      color: {$color['color']};
+    }
+
     /* Page Colors */
     .site-header .nav-primary .menu-item.has-{$color['slug']}-page-color {
       background-image: linear-gradient({$color['color']}, {$color['color']});

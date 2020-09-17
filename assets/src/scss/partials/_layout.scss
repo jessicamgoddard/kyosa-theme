@@ -7,3 +7,11 @@ body {
   margin: 0 auto;
   max-width: $width-regular;
 }
+
+.alignleft {
+  margin-right: $px-30-to-rem;
+}
+
+.alignright {
+  margin-left: $px-30-to-rem;
+}
