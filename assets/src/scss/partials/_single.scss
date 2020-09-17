@@ -1,0 +1,17 @@
+.single {
+
+  .entry-header {
+    margin-bottom: $px-60-to-rem !important;
+  }
+
+  .entry-categories {
+    padding: $px-15-to-rem;
+  }
+
+  .entry-header + .entry-meta {
+    font-size: 1rem;
+    font-style: italic;
+    margin-bottom: $px-60-to-rem;
+  }
+
+}

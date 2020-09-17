@@ -60,6 +60,18 @@ function kyosa_custom_gutenberg_css() {
       background-color: {$color['color']};
     }
 
+    /* Category Colors */
+    .category-navigation .has-{$color['slug']}-category-color:hover,
+    .category-navigation .has-{$color['slug']}-category-color:focus,
+    .category-navigation .current-menu-item .has-{$color['slug']}-category-color {
+      border-color: {$color['color']} !important;
+    }
+
+    .entry-categories .has-{$color['slug']}-category-color {
+      background-color: {$color['color']};
+      border-color: {$color['color']};
+    }
+
 CSS;
 
   }

@@ -1,7 +1,19 @@
 body {
+  color: $black;
   font-family: $roboto;
   font-size: 1.125rem;
   letter-spacing: .1em;
+  line-height: 1.5;
+}
+
+a {
+  color: currentColor;
+  font-weight: 700;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
 }
 
 h1,
@@ -65,7 +77,6 @@ h6 {
     margin: 0 auto;
   }
 
-  .alignwide,
   .alignfull {
     margin-left: calc( 50% - 50vw );
     margin-right: calc( 50% - 50vw );
@@ -81,8 +92,8 @@ h6 {
 @media only screen and (min-width: $wide-breakpoint) {
 
   .alignwide {
-    padding-left: 150px;
-    padding-right: 150px;
+    margin-left: -180px;
+    margin-right: -180px;
   }
 
 }

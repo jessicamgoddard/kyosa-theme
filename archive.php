@@ -19,6 +19,12 @@ function kyosa_archive_body_class( $classes ) {
 
 	endif;
 
+	if( has_post_thumbnail( get_option( 'page_for_posts' ) ) && !is_search() ) :
+
+		$classes[] = 'has-post-thumbnail';
+
+	endif;
+
 	return $classes;
 
 }
@@ -26,7 +32,7 @@ function kyosa_archive_body_class( $classes ) {
 // Adds div around articles
 add_action( 'genesis_before_while', 'kyosa_articles_div_start' );
 function kyosa_articles_div_start() {
-	echo '<div class="articles">';
+	echo '<div class="articles alignwide">';
 }
 
 add_action( 'genesis_after_endwhile', 'kyosa_articles_div_end', 5 );
@@ -42,8 +48,8 @@ function kyosa_category_nav() {
 		$cats = get_categories();
 		$current_cat = get_queried_object()->term_id;
 		?>
-		<nav aria-label="Categories">
-			<ul id="category-navigation" role="menubar" aria-label="Categories">
+		<nav class="category-navigation" aria-label="Categories">
+			<ul id="category-navigation" class="menu" role="menubar" aria-label="Categories">
 				<?php
 				foreach( $cats as $cat ) :
 					$menu_item_class = 'menu-item';
@@ -70,7 +76,7 @@ function kyosa_add_archive_hero_image() {
 
   if( has_post_thumbnail( $blog_id ) && !is_search() ) :
     ?>
-    <div class="page-hero alignwide">
+    <div class="page-hero">
       <div class="page-hero__image" style="background-image: url('<?= get_the_post_thumbnail_url( $blog_id ) ?>')">
         <?= get_the_post_thumbnail( $blog_id ) ?>
       </div>
