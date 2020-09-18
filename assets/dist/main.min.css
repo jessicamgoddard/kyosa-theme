@@ -1119,10 +1119,12 @@ h6 {
     margin: 0 auto; }
   .alignfull {
     margin-left: calc( 50% - 50vw);
-    margin-right: calc( 50% - 50vw); }
+    margin-right: calc( 50% - 50vw);
+    width: auto; }
   .alignwide {
     padding-left: 30px;
-    padding-right: 30px; } }
+    padding-right: 30px;
+    width: auto; } }
 
 @media only screen and (min-width: 75rem) {
   .alignwide {
@@ -1671,6 +1673,81 @@ input {
   font-size: 1rem;
   font-style: italic;
   margin-bottom: 3.75rem; }
+
+.wp-block-latest-posts {
+  padding-left: 0 !important; }
+  .wp-block-latest-posts li {
+    list-style-type: none !important;
+    margin-bottom: .5em; }
+    .wp-block-latest-posts li .wp-block-latest-posts__post-author,
+    .wp-block-latest-posts li .wp-block-latest-posts__post-date {
+      font-style: italic; }
+    .wp-block-latest-posts li .wp-block-latest-posts__post-excerpt {
+      font-size: 1rem;
+      margin-bottom: 2em; }
+
+.wp-block-group.has-background {
+  padding-left: 30px;
+  padding-right: 30px; }
+
+.wp-block-separator {
+  color: #393939; }
+  .wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
+    max-width: 100px; }
+  .wp-block-separator:not(.is-style-dots) {
+    border-bottom-width: 7px; }
+  .wp-block-separator.is-style-dots::before {
+    font-size: 90px;
+    letter-spacing: .5em;
+    line-height: 0; }
+
+.wp-block-gallery.alignfull .blocks-gallery-grid {
+  padding-left: 0;
+  padding-right: 0; }
+
+.wp-block-gallery .blocks-gallery-item img {
+  width: 100%; }
+
+.wp-block-gallery .blocks-gallery-item__caption {
+  margin-bottom: 0; }
+
+.wp-block-image.size-medium figcaption {
+  width: 300px; }
+
+.wp-block-image.size-thumbnail figcaption {
+  width: 150px; }
+
+.wp-block-pullquote {
+  border-top: 3px solid #393939;
+  border-bottom: 3px solid #393939;
+  margin: 3em auto;
+  max-width: 37.5rem;
+  padding: 0; }
+  .wp-block-pullquote blockquote {
+    margin: 1.875rem 0;
+    text-align: left; }
+  .wp-block-pullquote p {
+    font-family: "Roboto Slab", serif;
+    font-size: 1.5rem;
+    font-style: normal; }
+  .wp-block-pullquote.has-background blockquote {
+    margin: 0;
+    max-width: unset;
+    padding: 1.875rem; }
+    .wp-block-pullquote.has-background blockquote p {
+      font-size: 1.5rem; }
+
+.wp-block-quote {
+  border-left: 4px solid #393939;
+  margin: 0 0 3rem !important;
+  padding-left: 1em; }
+  .wp-block-quote p {
+    font-family: "Roboto Slab", serif;
+    font-size: 1.5rem;
+    font-style: normal; }
+  .wp-block-quote.is-style-large p {
+    font-size: 2rem;
+    font-style: normal; }
 
 .site-container {
   position: relative; }

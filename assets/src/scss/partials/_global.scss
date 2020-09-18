@@ -80,11 +80,13 @@ h6 {
   .alignfull {
     margin-left: calc( 50% - 50vw );
     margin-right: calc( 50% - 50vw );
+    width: auto;
   }
 
   .alignwide {
     padding-left: 30px;
     padding-right: 30px;
+    width: auto;
   }
 
 }
