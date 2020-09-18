@@ -7,6 +7,7 @@
  * @since        1.0.0
 **/
 
+add_action( 'enqueue_block_editor_assets', 'kyosa_custom_gutenberg_css' );
 add_action( 'wp_enqueue_scripts', 'kyosa_custom_gutenberg_css' );
 function kyosa_custom_gutenberg_css() {
 
@@ -72,10 +73,16 @@ function kyosa_custom_gutenberg_css() {
       border-color: {$color['color']};
     }
 
+    /* Box Block */
+    .wp-block-pandp-blocks-box.has-{$color['slug']}-box-color .box-bkg::after {
+      background-color: {$color['color']};
+    }
+
 CSS;
 
   }
 
-  wp_add_inline_style( 'kyosa-theme-inline-css', $css );
+  wp_add_inline_style( 'kyosa-theme-main-css', $css );
+  wp_add_inline_style( 'kyosa-theme-editor-main-css', $css );
 
 }

@@ -198,3 +198,9 @@ summary {
     font-size: 2rem;
     font-style: normal; }
 
+.wp-block {
+  max-width: 900px; }
+
+.wp-block[data-align="wide"] {
+  max-width: 1200px; }
+

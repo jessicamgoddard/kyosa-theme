@@ -1,3 +1,11 @@
 @import 'partials/base';
 @import 'partials/reset';
 @import 'partials/blocks';
+
+.wp-block {
+  max-width: 900px;
+}
+
+.wp-block[data-align="wide"] {
+  max-width: 1200px;
+}
