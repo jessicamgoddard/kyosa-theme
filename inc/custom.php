@@ -84,8 +84,14 @@ function kyosa_add_page_post_hero_image() {
         <?= get_the_post_thumbnail() ?>
       </div>
     </div>
+    <div class="wrap alignwide">
     <?php
   endif;
+}
+
+add_action( 'genesis_entry_header', 'kyosa_add_header_wrap_close', 10 );
+function kyosa_add_header_wrap_close() {
+  echo '</div>';
 }
 
 // Adds page color body class

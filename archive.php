@@ -81,8 +81,14 @@ function kyosa_add_archive_hero_image() {
         <?= get_the_post_thumbnail( $blog_id ) ?>
       </div>
     </div>
+		<div class="wrap alignwide">
     <?php
   endif;
+}
+
+add_action( 'genesis_archive_title_descriptions', 'kyosa_add_archive_description_close', 10 );
+function kyosa_add_archive_description_close() {
+	echo '</div>';
 }
 
 // Moves post featured images out of content area

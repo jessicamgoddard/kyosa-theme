@@ -11,9 +11,6 @@
 // Starts the engine.
 require_once get_template_directory() . '/lib/init.php';
 
-// Loads configuration options
-// require_once get_stylesheet_directory() . '/inc/config.php';
-
 // Loads scripts and styles
 require_once get_stylesheet_directory() . '/inc/scripts-styles.php';
 // Adds programmatic inline CSS

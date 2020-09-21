@@ -1,8 +1,5 @@
-.site-header {
-  background-color: #fff;
-}
-
 .site-header .wrap {
+  background-color: #fff;
   margin: 0;
   max-width: unset;
   padding: 15px;;
@@ -12,9 +9,14 @@
     width: calc( 100% - 5rem );
   }
 
+}
+
+.site-header {
+
   .menu-toggle {
     background-color: #fff;
     border-radius: $px-30-to-rem 0 0 $px-30-to-rem;
+    box-shadow: 5px 5px 3px rgba(0,0,0,.16);
     font-size: 0;
     height: 4.375rem;
     margin: 0;
@@ -78,7 +80,7 @@
 /* Secondary menu styles */
 .site-header .nav-secondary {
   background-color: #fff;
-  overflow: scroll;
+  overflow: auto;
   position: fixed;
     top: 85px;
     left: 0;
@@ -251,13 +253,51 @@
 
 }
 
-@media only screen and (min-width: $standard-breakpoint) {
+@media only screen and (min-width: 960px) {
 
   .site-header {
+    overflow: hidden;
     padding-bottom: $px-15-to-rem;
     position: sticky;
       top: 0;
     z-index: 999;
+
+    .wrap {
+      transition: all 250ms ease-in-out;
+    }
+
+    .wrap + .menu-toggle {
+      display: block;
+      transform: translateX(100%);
+      visibility: visible;
+    }
+
+    &.is-scrolled {
+
+      .wrap {
+        opacity: 0;
+        transform: translateX(100%);
+
+        & + .menu-toggle {
+          transform: translateX(0);
+        }
+
+      }
+
+    }
+
+    &.activated {
+
+      .wrap {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      .menu-toggle {
+      }
+
+    }
+
   }
 
   .admin-bar .site-header {
@@ -333,7 +373,6 @@
     }
 
     .nav-primary {
-      margin-right: $px-neg-30-to-rem;
 
       .menu {
         justify-content: flex-end;
@@ -389,7 +428,7 @@
 
 }
 
-@media only screen and (min-width: $wide-breakpoint) {
+@media only screen and (min-width: $breakpoint-wide) {
 
   .site-header > .wrap {
     padding-left: $px-150-to-rem;
