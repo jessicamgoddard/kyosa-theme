@@ -273,6 +273,7 @@
     }
 
     &.is-scrolled {
+      width: 0;
 
       .wrap {
         opacity: 0;
@@ -287,6 +288,7 @@
     }
 
     &.activated {
+      width: auto;
 
       .wrap {
         opacity: 1;

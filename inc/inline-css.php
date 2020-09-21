@@ -78,6 +78,11 @@ function kyosa_custom_gutenberg_css() {
       background-color: {$color['color']};
     }
 
+    /* Heading Underline Block */
+    .has-{$color['slug']}-underline-color::after {
+      background-color: {$color['color']};
+    }
+
 CSS;
 
   }

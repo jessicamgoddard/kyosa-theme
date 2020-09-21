@@ -1100,7 +1100,8 @@ h5 {
 h6 {
   font-size: 1rem; }
 
-.entry-content > *:not(.alignfull),
+.page .entry-content > *:not(.alignfull),
+.post .entry-content > *:not(.alignfull),
 .alignwide {
   margin-left: auto;
   margin-right: auto;
@@ -1108,7 +1109,8 @@ h6 {
   padding-left: 15px;
   padding-right: 15px; }
 
-.entry-content > *:not(.alignfull):not(.alignwide) {
+.page .entry-content > *:not(.alignfull):not(.alignwide),
+.post .entry-content > *:not(.alignfull):not(.alignwide) {
   max-width: 58.13rem; }
 
 .alignleft {
@@ -1368,14 +1370,18 @@ input {
       display: block;
       transform: translateX(100%);
       visibility: visible; }
-    .site-header.is-scrolled .wrap {
-      opacity: 0;
-      transform: translateX(100%); }
-      .site-header.is-scrolled .wrap + .menu-toggle {
+    .site-header.is-scrolled {
+      width: 0; }
+      .site-header.is-scrolled .wrap {
+        opacity: 0;
+        transform: translateX(100%); }
+        .site-header.is-scrolled .wrap + .menu-toggle {
+          transform: translateX(0); }
+    .site-header.activated {
+      width: auto; }
+      .site-header.activated .wrap {
+        opacity: 1;
         transform: translateX(0); }
-    .site-header.activated .wrap {
-      opacity: 1;
-      transform: translateX(0); }
   .admin-bar .site-header {
     top: 0; }
   .admin-bar .nav-secondary {
