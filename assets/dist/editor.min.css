@@ -123,6 +123,67 @@ summary {
   display: none; }
 
 /* stylelint-enable */
+body {
+  color: #393939;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.125rem;
+  letter-spacing: .1em;
+  line-height: 1.5; }
+
+a {
+  color: currentColor;
+  font-weight: 700; }
+
+a:hover,
+a:focus {
+  text-decoration: none; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1.2;
+  margin: 0 0 .5em 0; }
+
+h1 {
+  font-size: 4.188rem; }
+
+h2 {
+  font-size: 3.125rem; }
+
+h3 {
+  font-size: 2.313rem; }
+
+h4 {
+  font-size: 1.75rem; }
+
+h5 {
+  font-size: 1.313rem; }
+
+h6 {
+  font-size: 1rem; }
+
+.entry-content > *:not(.alignfull) {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1230px;
+  padding-left: 15px;
+  padding-right: 15px; }
+
+.entry-content > *:not(.alignfull):not(.alignwide) {
+  max-width: 930px; }
+
+.alignleft {
+  margin-right: 30px; }
+
+.alignright {
+  margin-left: 30px; }
+
 .wp-block-latest-posts {
   padding-left: 0 !important; }
   .wp-block-latest-posts li {

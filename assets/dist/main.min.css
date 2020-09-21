@@ -1100,36 +1100,21 @@ h5 {
 h6 {
   font-size: 1rem; }
 
-.wrap {
-  margin: 0 15px;
-  max-width: 56.25rem; }
+.entry-content > *:not(.alignfull) {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1230px;
+  padding-left: 15px;
+  padding-right: 15px; }
+
+.entry-content > *:not(.alignfull):not(.alignwide) {
+  max-width: 930px; }
 
 .alignleft {
   margin-right: 30px; }
 
 .alignright {
   margin-left: 30px; }
-
-.alignfull {
-  margin-left: -15px;
-  margin-right: -15px; }
-
-@media only screen and (min-width: 56.25rem) {
-  .wrap {
-    margin: 0 auto; }
-  .alignfull {
-    margin-left: calc( 50% - 50vw);
-    margin-right: calc( 50% - 50vw);
-    width: auto; }
-  .alignwide {
-    padding-left: 30px;
-    padding-right: 30px;
-    width: auto; } }
-
-@media only screen and (min-width: 75rem) {
-  .alignwide {
-    margin-left: -180px;
-    margin-right: -180px; } }
 
 button,
 input[type="submit"],
@@ -1449,9 +1434,6 @@ input {
   .site-header > .wrap {
     padding-left: 9.375rem;
     padding-right: 9.375rem; } }
-
-.site-inner {
-  overflow: hidden; }
 
 .archive-description {
   margin-bottom: 0; }
