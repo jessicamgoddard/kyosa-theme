@@ -10,3 +10,7 @@
 .wp-block[data-align="wide"] {
   max-width: 1200px;
 }
+
+.wp-block[data-align="full"] {
+  max-width: unset;
+}

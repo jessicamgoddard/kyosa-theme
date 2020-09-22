@@ -148,7 +148,7 @@ h6 {
   font-weight: 700;
   letter-spacing: 0;
   line-height: 1.2;
-  margin: 0 0 .5em 0; }
+  margin: 0 0 .25em 0; }
 
 h1 {
   font-size: 4.188rem; }
@@ -204,7 +204,9 @@ h6 {
   padding-right: 30px; }
 
 .wp-block-separator {
-  color: #393939; }
+  color: #393939;
+  margin-top: 0;
+  margin-bottom: 1.875rem; }
   .wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
     max-width: 100px; }
   .wp-block-separator:not(.is-style-dots) {
@@ -213,6 +215,9 @@ h6 {
     font-size: 90px;
     letter-spacing: .5em;
     line-height: 0; }
+
+.wp-block .wp-block-separator.has-background:not(.is-style-dots) {
+  height: 7px; }
 
 .wp-block-gallery.alignfull .blocks-gallery-grid {
   padding-left: 0;
@@ -243,12 +248,14 @@ h6 {
     font-family: "Roboto Slab", serif;
     font-size: 1.5rem;
     font-style: normal; }
-  .wp-block-pullquote.has-background blockquote {
-    margin: 0;
-    max-width: unset;
-    padding: 1.875rem; }
-    .wp-block-pullquote.has-background blockquote p {
-      font-size: 1.5rem; }
+  .wp-block-pullquote.has-background {
+    border: 0; }
+    .wp-block-pullquote.has-background blockquote {
+      margin: 0;
+      max-width: unset;
+      padding: 1.875rem; }
+      .wp-block-pullquote.has-background blockquote p {
+        font-size: 1.5rem; }
 
 .wp-block-quote {
   border-left: 4px solid #393939;
@@ -265,9 +272,55 @@ h6 {
 .is-style-serif {
   font-family: "Roboto Slab", serif; }
 
+.button,
+.wp-block-button__link {
+  background-color: transparent;
+  border: 3px solid #393939;
+  border-radius: 1.875rem;
+  color: #393939;
+  cursor: pointer;
+  font-weight: 700;
+  transition: all 250ms ease-in-out; }
+
+.button:hover,
+.button:focus,
+.wp-block-button:not(.is-style-underscore) .wp-block-button__link:hover,
+.wp-block-button:not(.is-style-underscore) .wp-block-button__link:focus {
+  background-color: #393939;
+  border-radius: 0;
+  color: #fff !important; }
+
+.is-style-underscore .wp-block-button__link {
+  border: 0;
+  border-radius: 0;
+  padding: 0 0 0 30px;
+  position: relative; }
+
+.is-style-underscore .wp-block-button__link::before {
+  border-bottom: 3px solid currentColor;
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 3px;
+  transition: all 250ms ease-in-out;
+  width: 25px; }
+
+.is-style-underscore .wp-block-button__link:hover,
+.is-style-underscore .wp-block-button__link:focus {
+  color: #393939; }
+
+.is-style-underscore .wp-block-button__link:hover::before,
+.is-style-underscore .wp-block-button__link:focus::before {
+  bottom: -3px;
+  width: 100%; }
+
 .wp-block {
   max-width: 900px; }
 
 .wp-block[data-align="wide"] {
   max-width: 1200px; }
+
+.wp-block[data-align="full"] {
+  max-width: unset; }
 

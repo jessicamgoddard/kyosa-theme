@@ -5,21 +5,9 @@
     list-style-type: none !important;
     margin-bottom: .5em;
 
-    .wp-block-latest-posts__featured-image {
-    }
-
-    a {
-    }
-
     .wp-block-latest-posts__post-author,
     .wp-block-latest-posts__post-date {
       font-style: italic;
-    }
-
-    .wp-block-latest-posts__post-author {
-    }
-
-    .wp-block-latest-posts__post-date {
     }
 
     .wp-block-latest-posts__post-excerpt {
@@ -38,6 +26,8 @@
 
 .wp-block-separator {
   color: $black;
+  margin-top: 0;
+  margin-bottom: $px-30-to-rem;
 
   &:not(.is-style-wide):not(.is-style-dots) {
     max-width: 100px;
@@ -53,6 +43,10 @@
     line-height: 0;
   }
 
+}
+
+.wp-block .wp-block-separator.has-background:not(.is-style-dots) {
+   height: 7px;
 }
 
 .wp-block-gallery {
@@ -102,13 +96,18 @@
     font-style: normal;
   }
 
-  &.has-background blockquote {
-    margin: 0;
-    max-width: unset;
-    padding: $px-30-to-rem;
+  &.has-background {
+    border: 0;
 
-    p {
-      font-size: 1.5rem;
+    blockquote {
+      margin: 0;
+      max-width: unset;
+      padding: $px-30-to-rem;
+
+      p {
+        font-size: 1.5rem;
+      }
+
     }
 
   }
@@ -137,4 +136,53 @@
 
 .is-style-serif {
   font-family: $roboto-slab;
+}
+
+.button,
+.wp-block-button__link {
+  background-color: transparent;
+  border: 3px solid $black;
+  border-radius: $px-30-to-rem;
+  color: $black;
+  cursor: pointer;
+  font-weight: 700;
+  transition: all 250ms ease-in-out;
+}
+
+.button:hover,
+.button:focus,
+.wp-block-button:not(.is-style-underscore) .wp-block-button__link:hover,
+.wp-block-button:not(.is-style-underscore) .wp-block-button__link:focus {
+  background-color: $black;
+  border-radius: 0;
+  color: #fff !important;
+}
+
+.is-style-underscore .wp-block-button__link {
+  border: 0;
+  border-radius: 0;
+  padding: 0 0 0 30px;
+  position: relative;
+}
+
+.is-style-underscore .wp-block-button__link::before {
+  border-bottom: 3px solid currentColor;
+  content: '';
+  display: block;
+  position: absolute;
+    left: 0;
+    bottom: 3px;
+  transition: all 250ms ease-in-out;
+  width: 25px;
+}
+
+.is-style-underscore .wp-block-button__link:hover,
+.is-style-underscore .wp-block-button__link:focus {
+  color: $black;
+}
+
+.is-style-underscore .wp-block-button__link:hover::before,
+.is-style-underscore .wp-block-button__link:focus::before {
+  bottom: -3px;
+  width: 100%;
 }
