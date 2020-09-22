@@ -1105,13 +1105,13 @@ h6 {
 .alignwide {
   margin-left: auto;
   margin-right: auto;
-  max-width: 76.88rem;
+  max-width: 76.88em;
   padding-left: 15px;
   padding-right: 15px; }
 
 .page .entry-content > *:not(.alignfull):not(.alignwide),
 .post .entry-content > *:not(.alignfull):not(.alignwide) {
-  max-width: 58.13rem; }
+  max-width: 58.13em; }
 
 .alignleft {
   margin-right: 30px; }
@@ -1127,6 +1127,7 @@ input[type="submit"],
   border: 3px solid #393939;
   border-radius: 1.875rem;
   color: #393939;
+  cursor: pointer;
   font-weight: 700; }
 
 button:hover,
@@ -1450,7 +1451,7 @@ input {
         .site-header > .wrap .nav-primary .menu .menu-item.menu-item-has-children span {
           padding-right: 0; } }
 
-@media only screen and (min-width: 76.88rem) {
+@media only screen and (min-width: 76.88em) {
   .site-header > .wrap {
     padding-left: 9.375rem;
     padding-right: 9.375rem; } }
@@ -1496,7 +1497,7 @@ input {
   .page-hero .page-hero__image img {
     display: none; }
 
-@media only screen and (min-width: 76.88rem) {
+@media only screen and (min-width: 76.88em) {
   .page-hero {
     margin-left: auto;
     margin-right: auto;
@@ -1591,7 +1592,7 @@ input {
     background-size: 100% 100%;
     color: #393939; }
 
-@media only screen and (min-width: 58.13rem) {
+@media only screen and (min-width: 58.13em) {
   .archive .articles {
     display: flex;
     flex-wrap: wrap;
@@ -1721,6 +1722,9 @@ input {
   .wp-block-quote.is-style-large p {
     font-size: 2rem;
     font-style: normal; }
+
+.is-style-serif {
+  font-family: "Roboto Slab", serif; }
 
 .site-container {
   position: relative; }

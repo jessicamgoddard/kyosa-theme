@@ -163,3 +163,24 @@ register_block_pattern(
     'content'     => "<!-- wp:columns --><div class=\"wp-block-columns\"><!-- wp:column {\"width\":12.5} --><div class=\"wp-block-column\" style=\"flex-basis:12.5%\"></div><!-- /wp:column --><!-- wp:column {\"width\":75} --><div class=\"wp-block-column\" style=\"flex-basis:75%\"><!-- wp:heading {\"align\":\"center\"} --><h2 class=\"has-text-align-center\"></h2><!-- /wp:heading --><!-- wp:paragraph {\"align\":\"center\",\"className\":\"is-style-serif\",\"fontSize\":\"extra-large\"} --><p class=\"has-text-align-center is-style-serif has-extra-large-font-size\"></p><!-- /wp:paragraph --></div><!-- /wp:column --><!-- wp:column {\"width\":12.5} --><div class=\"wp-block-column\" style=\"flex-basis:12.5%\"></div><!-- /wp:column --></div><!-- /wp:columns -->",
   )
 );
+
+// Allow and set custom units
+if( $kyosa_config[ 'custom-units' ] ) :
+
+  $units = implode( ', ', $kyosa_config[ 'custom-units' ] );
+
+  add_theme_support( 'custom-units', $units );
+
+endif;
+
+// Set editor stylesheet
+add_action( 'after_setup_theme', 'wpdocs_theme_add_editor_styles' );
+function wpdocs_theme_add_editor_styles() {
+
+  // $kyosa_config = genesis_get_config( 'main' );
+
+  // if( $kyosa_config[ 'theme-supports' ][ 'editor-styles' ] ) :
+    add_editor_style( '/assets/dist/editor.min.css' );
+  // endif;
+//
+}

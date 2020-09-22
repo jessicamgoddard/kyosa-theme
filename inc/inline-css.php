@@ -83,6 +83,21 @@ function kyosa_custom_gutenberg_css() {
       background-color: {$color['color']};
     }
 
+    /* Accordion Block */
+    .has-{$color['slug']}-page-color .wp-block-pandp-blocks-accordion.is-active::after,
+    .has-{$color['slug']}-page-color .wp-block-pandp-blocks-accordion:hover::after,
+    .has-{$color['slug']}-page-color .wp-block-pandp-blocks-accordion:focus::after {
+      background-color: {$color['color']};
+    }
+
+    .has-{$color['slug']}-page-color .wp-block-pandp-blocks-accordion .accordion-heading {
+      color: {$color['color']};
+    }
+
+    .has-{$color['slug']}-page-color .wp-block-pandp-blocks-accordion .accordion-trigger::after {
+      color: {$color['color']};
+    }
+
 CSS;
 
   }
