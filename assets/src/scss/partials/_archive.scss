@@ -37,6 +37,7 @@
 
     .entry {
       display: flex;
+        align-items: flex-start;
         flex-direction: column;
       margin-bottom: $px-30-to-rem;
 
@@ -203,7 +204,7 @@
         }
 
         &.has-post-thumbnail {
-          grid-template-columns: 1fr .75fr;
+          grid-template-columns: 700px 1fr;
           margin-bottom: $px-150-to-rem;
         }
 

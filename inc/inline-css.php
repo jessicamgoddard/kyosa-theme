@@ -57,7 +57,7 @@ function kyosa_custom_gutenberg_css() {
       border-color: {$color['color']} !important;
     }
 
-    body.has-{$color['slug']}-page-color h1.entry-title {
+    body.has-{$color['slug']}-page-color h1.entry-title
       background-color: {$color['color']};
     }
 
@@ -71,6 +71,10 @@ function kyosa_custom_gutenberg_css() {
     .entry-categories .has-{$color['slug']}-category-color {
       background-color: {$color['color']};
       border-color: {$color['color']};
+    }
+
+    body.has-{$color['slug']}-category-color .archive-title {
+      background-color: {$color['color']};
     }
 
     /* Box Block */

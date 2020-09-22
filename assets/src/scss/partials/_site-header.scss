@@ -36,16 +36,17 @@
       opacity: 0;
     }
 
-    &.activated svg {
+  }
 
-      #bars {
-        opacity: 0;
-      }
+  &.activated .menu-toggle svg,
+  .menu-toggle.activated svg {
 
-      #x {
-        opacity: 1;
-      }
+    #bars {
+      opacity: 0;
+    }
 
+    #x {
+      opacity: 1;
     }
 
   }
@@ -275,7 +276,8 @@
     &.is-scrolled {
       width: 0;
 
-      .wrap {
+      & > .wrap {
+        box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.16);
         opacity: 0;
         transform: translateX(100%);
 

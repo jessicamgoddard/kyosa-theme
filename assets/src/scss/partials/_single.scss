@@ -8,10 +8,20 @@
     padding: $px-15-to-rem;
   }
 
-  .entry-header + .entry-meta {
+  .entry-meta-container {
+    display: flex;
+      align-items: center;
+      flex-wrap: wrap;
     font-size: 1rem;
     font-style: italic;
-    margin-bottom: $px-60-to-rem;
+    margin: 0 auto $px-60-to-rem;
+    max-width: $breakpoint-wide;
+    padding: 0 $px-15-to-rem;
+
+    .printfriendly {
+      margin: 0 $px-15-to-rem .25em;
+    }
+
   }
 
 }

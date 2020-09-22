@@ -169,17 +169,19 @@ h6 {
   font-size: 1rem; }
 
 .page .entry-content > *:not(.alignfull),
-.post .entry-content > *:not(.alignfull),
-.alignwide {
+.single .entry-content > *:not(.alignfull):not(.pf-content),
+.alignwide,
+.single .entry-content .pf-content > *:not(.alignfull) {
   margin-left: auto;
   margin-right: auto;
-  max-width: 76.88em;
+  max-width: 76.88rem;
   padding-left: 15px;
   padding-right: 15px; }
 
 .page .entry-content > *:not(.alignfull):not(.alignwide),
-.post .entry-content > *:not(.alignfull):not(.alignwide) {
-  max-width: 58.13em; }
+.single .entry-content > *:not(.alignfull):not(.alignwide):not(.pf-content),
+.single .entry-content .pf-content > *:not(.alignfull):not(.alignwide) {
+  max-width: 58.13rem; }
 
 .alignleft {
   margin-right: 30px; }
