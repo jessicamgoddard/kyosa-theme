@@ -79,7 +79,8 @@ function kyosa_custom_gutenberg_css() {
     }
 
     /* Heading Underline Block */
-    .has-{$color['slug']}-underline-color::after {
+    .has-{$color['slug']}-underline-color::after,
+    .has-{$color['slug']}-underline-color .rich-text::after {
       background-color: {$color['color']};
     }
 
@@ -102,7 +103,7 @@ CSS;
 
   }
 
-  wp_add_inline_style( 'kyosa-theme-main-css', $css );
-  wp_add_inline_style( 'kyosa-theme-editor-main-css', $css );
+  wp_add_inline_style( 'kyosa-theme-inline-css', $css );
+  wp_add_inline_style( 'kyosa-theme-editor-inline-css', $css );
 
 }
