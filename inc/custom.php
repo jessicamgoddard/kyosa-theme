@@ -7,6 +7,50 @@
  * @since        1.0.0
 **/
 
+add_action( 'genesis_after_header', 'kyosa_add_event_categories' );
+function kyosa_add_event_categories() {
+
+  if( is_archive( 'events' ) ) :
+    $cats = get_terms( ['taxonomy' => 'tribe_events_cat' ] );
+    $current_cat = get_queried_object();
+    ?>
+    <div class="archive-description posts-page-description">
+      <div class="wrap alignwide">
+        <h1 class="archive-title">
+          <?php
+          if( is_tax() ) :
+            echo $current_cat->name;
+          else :
+            echo 'Events';
+          endif;
+          ?>
+        </h1>
+      </div>
+    </div>
+
+    <div class="event-categories alignwide">
+  		<nav class="category-navigation" aria-label="Categories">
+  			<ul id="category-navigation" class="menu" role="menubar" aria-label="Categories">
+  				<?php
+  				foreach( $cats as $cat ) :
+  					$menu_item_class = 'menu-item';
+  					if( $cat->term_id === $current_cat->term_id ) :
+  						$menu_item_class .= ' current-menu-item';
+  					endif;
+  					?>
+  					<li role="none" class="<?= $menu_item_class ?>">
+  						<a role="menuitem" tabindex="0" class="menu-item-link has-<?= get_field( 'color', 'category_' . $cat->term_id ) ?>-category-color" href="<?= esc_url( get_category_link( $cat->term_id ) ) ?>"><?= esc_html( $cat->name ) ?></a>
+  					</li>
+  				<?php endforeach; ?>
+  			</ul>
+  		</nav>
+    </div>
+
+    <?php
+  endif;
+
+}
+
 // Adds class to navigation
 add_filter( 'wp_nav_menu_objects', 'kyosa_add_menu_item_class', 10, 2 );
 function kyosa_add_menu_item_class( $items, $args ) {

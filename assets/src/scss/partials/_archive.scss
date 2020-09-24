@@ -2,39 +2,6 @@
 
   .articles {
 
-    .category-navigation {
-      border-bottom: 1px solid $black;
-      margin-bottom: $px-60-to-rem;
-
-      .menu {
-        display: flex;
-          flex-wrap: wrap;
-
-        .menu-item {
-          text-transform: lowercase;
-
-          a {
-            border-bottom: 4px solid transparent;
-            color: $black;
-            display: block;
-            font-size: 1.125rem;
-            font-weight: 500;
-            padding: 0.5rem $px-15-to-rem;
-            text-decoration: none;
-          }
-
-          a:hover,
-          a:focus,
-          &.current-menu-item a {
-            border-color: $black;
-          }
-
-        }
-
-      }
-
-    }
-
     .entry {
       display: flex;
         align-items: flex-start;
@@ -93,6 +60,39 @@
 
       &.has-post-thumbnail .entry-footer {
         margin-top: $px-neg-15-to-rem;
+      }
+
+    }
+
+  }
+
+}
+
+.category-navigation {
+  border-bottom: 1px solid $black;
+  margin-bottom: $px-60-to-rem;
+
+  .menu {
+    display: flex;
+      flex-wrap: wrap;
+
+    .menu-item {
+      text-transform: lowercase;
+
+      a {
+        border-bottom: 4px solid transparent;
+        color: $black;
+        display: block;
+        font-size: 1.125rem;
+        font-weight: 500;
+        padding: 0.5rem $px-15-to-rem;
+        text-decoration: none;
+      }
+
+      a:hover,
+      a:focus,
+      &.current-menu-item a {
+        border-color: $black;
       }
 
     }

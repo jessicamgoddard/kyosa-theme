@@ -263,7 +263,7 @@
     z-index: 999;
 
     .wrap {
-      transition: all 250ms ease-in-out;
+      transition: all 500ms ease-in-out;
     }
 
     .wrap + .menu-toggle {
@@ -284,12 +284,12 @@
         & + .menu-toggle {
           transform: translateX(0);
         }
-        
+
       }
 
       &.activated {
         animation-name: siteHeaderOpen;
-        animation-delay: 250ms;
+        animation-delay: 500ms;
         animation-fill-mode: forwards;
 
         & > .wrap {
@@ -301,7 +301,7 @@
 
       &:not(.activated) {
         animation-name: siteHeaderClose;
-        animation-delay: 250ms;
+        animation-delay: 500ms;
         animation-fill-mode: forwards;
         overflow: hidden;
       }
