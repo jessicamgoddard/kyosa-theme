@@ -1366,7 +1366,6 @@ input {
 
 @media only screen and (min-width: 960px) {
   .site-header {
-    overflow: hidden;
     padding-bottom: 0.9375rem;
     position: sticky;
     top: 0;
@@ -1375,21 +1374,39 @@ input {
       transition: all 250ms ease-in-out; }
     .site-header .wrap + .menu-toggle {
       display: block;
+      top: 100px;
       transform: translateX(100%);
       visibility: visible; }
     .site-header.is-scrolled {
-      width: 0; }
+      overflow: hidden; }
       .site-header.is-scrolled > .wrap {
         box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.16);
         opacity: 0;
         transform: translateX(100%); }
         .site-header.is-scrolled > .wrap + .menu-toggle {
           transform: translateX(0); }
-    .site-header.activated {
+      .site-header.is-scrolled.activated {
+        animation-name: siteHeaderOpen;
+        animation-delay: 250ms;
+        animation-fill-mode: forwards; }
+        .site-header.is-scrolled.activated > .wrap {
+          opacity: 1;
+          transform: translateX(0); }
+      .site-header.is-scrolled:not(.activated) {
+        animation-name: siteHeaderClose;
+        animation-delay: 250ms;
+        animation-fill-mode: forwards;
+        overflow: hidden; }
+  @keyframes siteHeaderOpen {
+    0% {
+      overflow: hidden; }
+    100% {
+      overflow: visible; } }
+  @keyframes siteHeaderClose {
+    0% {
       width: auto; }
-      .site-header.activated .wrap {
-        opacity: 1;
-        transform: translateX(0); }
+    100% {
+      width: 0; } }
   .admin-bar .site-header {
     top: 0; }
   .admin-bar .nav-secondary {
@@ -1791,6 +1808,76 @@ input {
   bottom: -3px;
   width: 100%; }
 
+.footer-widgets {
+  padding: 0.9375rem; }
+  .footer-widgets > .wrap {
+    display: flex;
+    align-items: center;
+    flex-direction: column; }
+  .footer-widgets .footer-widgets-1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; }
+  .footer-widgets .menu-primary-menu-container .menu > .menu-item > a {
+    border-bottom: 3px solid #393939; }
+  .footer-widgets .menu-primary-menu-container .menu .sub-menu .menu-item {
+    margin-left: 0; }
+    .footer-widgets .menu-primary-menu-container .menu .sub-menu .menu-item a {
+      display: inline-block;
+      font-size: 1rem;
+      font-weight: 400;
+      padding: 10px 10px 5px 5px; }
+  .footer-widgets .menu-primary-menu-container .menu a {
+    background-image: linear-gradient(#393939, #393939);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    padding: 10px 5px 3px;
+    text-decoration: none; }
+    .footer-widgets .menu-primary-menu-container .menu a:hover {
+      background-size: 100% 100%;
+      color: #fff; }
+  .footer-widgets .menu-secondary-container .menu-item a {
+    border-bottom: .25rem solid #fff;
+    text-decoration: none;
+    text-transform: lowercase; }
+  .footer-widgets .menu-secondary-container .menu-item:hover a,
+  .footer-widgets .menu-secondary-container .menu-item:focus a {
+    border-bottom-color: #393939; }
+
+.site-footer {
+  background-color: #F7F7F7;
+  font-size: 0.75rem;
+  padding: 1.875rem 0.9375rem 0;
+  text-align: center; }
+
+@media only screen and (min-width: 76.88rem) {
+  .footer-widgets {
+    padding-left: 9.375rem;
+    padding-right: 9.375rem; }
+    .footer-widgets > .wrap {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between; }
+    .footer-widgets .footer-widgets-1 {
+      flex-basis: 100%;
+      justify-content: space-between; }
+    .footer-widgets .footer-widgets-2,
+    .footer-widgets .footer-widgets-3 {
+      flex-basis: 50%; }
+      .footer-widgets .footer-widgets-2.footer-widgets-3,
+      .footer-widgets .footer-widgets-3.footer-widgets-3 {
+        display: flex;
+        justify-content: flex-end; }
+    .footer-widgets .menu-primary-menu-container .menu {
+      display: flex; }
+      .footer-widgets .menu-primary-menu-container .menu > .menu-item {
+        margin-right: 1.875rem; } }
+
+.site-footer > .wrap > p {
+  display: flex;
+  justify-content: space-between; }
+
 .site-container {
   position: relative; }
 
@@ -1798,7 +1885,7 @@ input {
   overflow: hidden;
   position: absolute;
   right: 10px;
-  bottom: 30px; }
+  bottom: 90px; }
   .pp-brand-link * {
     text-decoration: none;
     transition: all 250ms ease-in-out; }

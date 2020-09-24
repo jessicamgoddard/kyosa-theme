@@ -257,7 +257,6 @@
 @media only screen and (min-width: 960px) {
 
   .site-header {
-    overflow: hidden;
     padding-bottom: $px-15-to-rem;
     position: sticky;
       top: 0;
@@ -269,12 +268,13 @@
 
     .wrap + .menu-toggle {
       display: block;
+      top: 100px;
       transform: translateX(100%);
       visibility: visible;
     }
 
     &.is-scrolled {
-      width: 0;
+      overflow: hidden;
 
       & > .wrap {
         box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.16);
@@ -284,24 +284,48 @@
         & + .menu-toggle {
           transform: translateX(0);
         }
+        
+      }
 
+      &.activated {
+        animation-name: siteHeaderOpen;
+        animation-delay: 250ms;
+        animation-fill-mode: forwards;
+
+        & > .wrap {
+          opacity: 1;
+          transform: translateX(0);
+        }
+
+      }
+
+      &:not(.activated) {
+        animation-name: siteHeaderClose;
+        animation-delay: 250ms;
+        animation-fill-mode: forwards;
+        overflow: hidden;
       }
 
     }
 
-    &.activated {
+  }
+
+  @keyframes siteHeaderOpen {
+    0% {
+      overflow: hidden;
+    }
+    100% {
+      overflow: visible;
+    }
+  }
+
+  @keyframes siteHeaderClose {
+    0% {
       width: auto;
-
-      .wrap {
-        opacity: 1;
-        transform: translateX(0);
-      }
-
-      .menu-toggle {
-      }
-
     }
-
+    100% {
+      width: 0;
+    }
   }
 
   .admin-bar .site-header {

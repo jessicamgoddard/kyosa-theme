@@ -45,15 +45,14 @@ function kyosa_custom_gutenberg_css() {
     }
 
     /* Page Colors */
-    .site-header .nav-primary .menu-item.has-{$color['slug']}-page-color {
+    .site-header .nav-primary .menu-item.has-{$color['slug']}-page-color a,
+    .footer-widgets .menu .menu-item.has-{$color['slug']}-page-color a {
       background-image: linear-gradient({$color['color']}, {$color['color']});
     }
 
-    .site-header .menu-item.has-{$color['slug']}-page-color a span {
-      border-color: {$color['color']} !important;
-    }
-
-    .site-header .menu-item.has{$color['slug']}-page-color .sub-menu {
+    .site-header .menu-item.has-{$color['slug']}-page-color a span,
+    .site-header .menu-item.has-{$color['slug']}-page-color .sub-menu,
+    .footer-widgets .menu-item.has-{$color['slug']}-page-color a {
       border-color: {$color['color']} !important;
     }
 

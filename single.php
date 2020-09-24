@@ -15,8 +15,12 @@ add_action( 'genesis_before_entry_content', 'genesis_post_info' );
 add_filter( 'genesis_post_info', 'kyosa_post_info_filter' );
 function kyosa_post_info_filter( $post_info ) {
 
-  $post_info = '<div class="entry-meta-container">[post_date] by [post_author]' . do_shortcode( '[printfriendly]' ) . ' [post_edit]</div>';
-  return $post_info;
+  if( is_singular( 'post' ) ) :
+
+    $post_info = '<div class="entry-meta-container">[post_date] by [post_author]' . do_shortcode( '[printfriendly]' ) . ' [post_edit]</div>';
+    return $post_info;
+
+  endif;
 
 }
 
