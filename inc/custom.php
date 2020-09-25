@@ -10,7 +10,7 @@
 add_action( 'genesis_after_header', 'kyosa_add_event_categories' );
 function kyosa_add_event_categories() {
 
-  if( is_archive( 'events' ) ) :
+  if( is_post_type_archive( 'tribe_events' ) ) :
     $cats = get_terms( ['taxonomy' => 'tribe_events_cat' ] );
     $current_cat = get_queried_object();
     ?>
@@ -39,7 +39,7 @@ function kyosa_add_event_categories() {
   					endif;
   					?>
   					<li role="none" class="<?= $menu_item_class ?>">
-  						<a role="menuitem" tabindex="0" class="menu-item-link has-<?= get_field( 'color', 'category_' . $cat->term_id ) ?>-category-color" href="<?= esc_url( get_category_link( $cat->term_id ) ) ?>"><?= esc_html( $cat->name ) ?></a>
+  						<a role="menuitem" tabindex="0" class="menu-item-link has-<?= get_field( 'color', 'tribe_events_cat_' . $cat->term_id ) ?>-category-color" href="<?= esc_url( get_category_link( $cat->term_id ) ) ?>"><?= esc_html( $cat->name ) ?></a>
   					</li>
   				<?php endforeach; ?>
   			</ul>
@@ -152,11 +152,15 @@ add_filter( 'body_class', 'kyosa_page_color_body_class' );
 function kyosa_page_color_body_class( $classes ) {
 
   if( get_field( 'color' ) ) :
-	  $classes[] = 'has-' . get_field( 'color') . '-page-color';
+	  $classes[] = 'has-' . get_field( 'color' ) . '-page-color';
   endif;
 
   if( ( is_page() || is_singular() ) && has_post_thumbnail() ) :
     $classes[] = 'has-post-thumbnail';
+  endif;
+
+  if( get_field( 'color', 'tribe_events_cat_' . get_queried_object()->term_id ) ) :
+    $classes[] = 'has-' . get_field( 'color', 'tribe_events_cat_' . get_queried_object()->term_id ) . '-category-color';
   endif;
 
 	return $classes;

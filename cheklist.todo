@@ -1,7 +1,7 @@
 Preparation:
   ✔ Setup existing site on Google Analytics @done(2020-09-11 09:53) @project(Preparation)
-  ☐ Setup existing site on Google Search Console
-  ☐ Submit existing sitemap to Google Search Console
+  ✔ Setup existing site on Google Search Console @done(2020-09-25 12:35) @project(Preparation)
+  ✔ Submit existing sitemap to Google Search Console @done(2020-09-25 12:36) @project(Preparation)
   ✔ Get list of blog categories @done(2020-09-11 10:42) @project(Preparation)
   ✔ Get default blog category @done(2020-09-11 10:42) @project(Preparation)
   ✔ Get access to existing site @done(2020-09-11 10:03) @project(Preparation)
@@ -15,7 +15,7 @@ Planning:
   ✔ Custom block styles @done(2020-09-11 10:03) @project(Planning)
   ✔ Default block extensions @done(2020-09-11 10:03) @project(Planning)
   ✔ Custom block patterns @done(2020-09-11 10:31) @project(Planning)
-  ☐ Custom blocks
+  ✔ Custom blocks @done(2020-09-25 12:36) @project(Planning)
   ✔ Image sizes @done(2020-09-11 10:38) @project(Planning)
   ✔ ACF usage @done(2020-09-11 10:32) @project(Planning)
   ✔ Menu names and locations @done(2020-09-11 10:32) @project(Planning)
@@ -29,24 +29,24 @@ Planning:
 
 Local Setup:
   ✔ Create new site on Local using Blueprint @done(2020-09-11 10:42) @project(Local Setup)
-  ☐ Activate default plugins
-      ☐ Auto Image Attributes from Filename with Bulk Updater
-      ☐ Genesis Visual Hook Guide
-      ☐ Rebusted
-      ☐ Regenerate Thumbnails
-      ☐ Safe SVG
-      ☐ WordPress Importer
+  ✔ Activate default plugins @done(2020-09-25 12:36) @project(Local Setup)
+      ✔ Auto Image Attributes from Filename with Bulk Updater @done(2020-09-25 12:36) @project(Local Setup)
+      ✔ Genesis Visual Hook Guide @done(2020-09-25 12:36) @project(Local Setup)
+      ✔ Rebusted @done(2020-09-25 12:36) @project(Local Setup)
+      ✔ Regenerate Thumbnails @done(2020-09-25 12:36) @project(Local Setup)
+      ✔ Safe SVG @done(2020-09-25 12:36) @project(Local Setup)
+      ✔ WordPress Importer @done(2020-09-25 12:36) @project(Local Setup)
 
 Theme Setup:
-  ☐ Copy KYOSA Theme
-  ☐ Find/replace theme name
-  ☐ Modify inc/config.php
-  ☐ Install and activate Genesis framework
-  ☐ Install and activate child theme
-  ☐ Import test data
-  ☐ Add logo
-  ☐ Add favicon
-  ☐ Set comment preferences
+  ✔ Copy KYOSA Theme @done(2020-09-25 12:37) @project(Theme Setup)
+  ✔ Find/replace theme name @done(2020-09-25 12:37) @project(Theme Setup)
+  ✔ Modify inc/config.php @done(2020-09-25 12:37) @project(Theme Setup)
+  ✔ Install and activate Genesis framework @done(2020-09-25 12:37) @project(Theme Setup)
+  ✔ Install and activate child theme @done(2020-09-25 12:37) @project(Theme Setup)
+  ✔ Import test data @done(2020-09-25 12:37) @project(Theme Setup)
+  ✔ Add logo @done(2020-09-25 12:37) @project(Theme Setup)
+  ✔ Add favicon @done(2020-09-25 12:38) @project(Theme Setup)
+  ✔ Set comment preferences @done(2020-09-25 12:39) @project(Theme Setup)
 
 SiteGround Setup:
   ☐ Create sub-domain
@@ -55,16 +55,16 @@ SiteGround Setup:
   ☐ Disable caching
 
 WordPress Setup:
-  ☐ Set blog title and tagline
-  ☐ Set date and time
-  ☐ Set permalinks (check existing site)
-  ☐ Set media file structure (check existing site)
-  ☐ Check the "Discourage search engines from indexing site" box
-  ☐ Create blog categories
+  ✔ Set blog title and tagline @done(2020-09-25 12:39) @project(WordPress Setup)
+  ✔ Set date and time @done(2020-09-25 12:39) @project(WordPress Setup)
+  ✔ Set permalinks (check existing site) @done(2020-09-25 12:39) @project(WordPress Setup)
+  ✔ Set media file structure (check existing site) @done(2020-09-25 12:39) @project(WordPress Setup)
+  ✔ Check the "Discourage search engines from indexing site" box @done(2020-09-25 12:39) @project(WordPress Setup)
+  ✔ Create blog categories @done(2020-09-25 12:39) @project(WordPress Setup)
   ☐ Select default blog category
   ☐ Create primary pages
   ☐ Create menu(s)
-  ☐ Import existing content, plugins, and data
+  ✔ Import existing content, plugins, and data @done(2020-09-25 12:40) @project(WordPress Setup)
 
 Basic Theme Development:
   ☐ Create custom post types and taxonomies

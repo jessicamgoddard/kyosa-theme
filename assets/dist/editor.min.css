@@ -168,10 +168,11 @@ h5 {
 h6 {
   font-size: 1rem; }
 
-.page .entry-content > *:not(.alignfull),
+.page .entry-content > *:not(.alignfull):not(.pf-content),
+.page .entry-content .pf-content > *:not(.alignfull),
 .single .entry-content > *:not(.alignfull):not(.pf-content),
-.alignwide,
 .single .entry-content .pf-content > *:not(.alignfull),
+.alignwide,
 .single-tribe_events .site-inner > .wrap {
   margin-left: auto;
   margin-right: auto;
@@ -179,7 +180,8 @@ h6 {
   padding-left: 15px;
   padding-right: 15px; }
 
-.page .entry-content > *:not(.alignfull):not(.alignwide),
+.page .entry-content > *:not(.alignfull):not(.alignwide):not(.pf-content),
+.page .entry-content .pf-content > *:not(.alignfull):not(.alignwide),
 .single .entry-content > *:not(.alignfull):not(.alignwide):not(.pf-content),
 .single .entry-content .pf-content > *:not(.alignfull):not(.alignwide),
 .single-tribe_events .site-inner > .wrap {

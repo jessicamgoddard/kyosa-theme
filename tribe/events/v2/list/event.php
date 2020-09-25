@@ -31,7 +31,27 @@ $event_classes = tribe_get_post_class( [ 'tribe-events-calendar-list__event', 't
 			<div class="tribe-events-calendar-list__event-details tribe-common-g-col">
 
 				<header class="tribe-events-calendar-list__event-header">
-					<?php echo '<span class="categories">' . tribe_get_event_categories() . '</span>'; ?>
+					<p class="entry-meta">
+						<span class="entry-categories">
+							<?php // echo '<span class="categories">' . tribe_get_event_categories() . '</span>'; ?>
+							<?php
+							$cats = tribe_get_event_categories( [ 'echo' => false ] );
+							$cat_ids = tribe_get_event_cat_ids();
+							foreach( $cat_ids as $cat_id ) {
+								// print_r( get_term_by( 'term_taxonomy_id', $cat_id, 'tribe_events_cat' ) );
+								$cat = get_term_by( 'term_taxonomy_id', $cat_id, 'tribe_events_cat' );
+								$color = get_field( 'color', 'tribe_events_cat_' . $cat->term_id );
+								$class = '';
+								if( $color ) :
+									$class = 'has-' . $color . '-category-color';
+								endif;
+								echo '<a class="' . $class . '" href="/events/category/' . $cat->slug . '">';
+								echo $cat->name;
+								echo '</a>';
+							}
+							?>
+						</span>
+					</p>
 					<?php $this->template( 'list/event/cost', [ 'event' => $event ] ); ?>
 					<?php $this->template( 'list/event/title', [ 'event' => $event ] ); ?>
 					<?php $this->template( 'list/event/date', [ 'event' => $event ] ); ?>

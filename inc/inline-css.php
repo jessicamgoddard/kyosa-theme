@@ -56,15 +56,15 @@ function kyosa_custom_gutenberg_css() {
       border-color: {$color['color']} !important;
     }
 
-    body.has-{$color['slug']}-page-color h1.entry-title
+    body.has-{$color['slug']}-page-color h1.entry-title {
       background-color: {$color['color']};
     }
 
     /* Category Colors */
-    .category-navigation .has-{$color['slug']}-category-color:hover,
-    .category-navigation .has-{$color['slug']}-category-color:focus,
-    .category-navigation .current-menu-item .has-{$color['slug']}-category-color {
-      border-color: {$color['color']} !important;
+    .category-navigation .menu .menu-item .has-{$color['slug']}-category-color:hover,
+    .category-navigation .menu .menu-item .has-{$color['slug']}-category-color:focus,
+    .category-navigation .menu .menu-item.current-menu-item .has-{$color['slug']}-category-color {
+      border-color: {$color['color']};
     }
 
     .entry-categories .has-{$color['slug']}-category-color {

@@ -1100,10 +1100,11 @@ h5 {
 h6 {
   font-size: 1rem; }
 
-.page .entry-content > *:not(.alignfull),
+.page .entry-content > *:not(.alignfull):not(.pf-content),
+.page .entry-content .pf-content > *:not(.alignfull),
 .single .entry-content > *:not(.alignfull):not(.pf-content),
-.alignwide,
 .single .entry-content .pf-content > *:not(.alignfull),
+.alignwide,
 .single-tribe_events .site-inner > .wrap {
   margin-left: auto;
   margin-right: auto;
@@ -1111,7 +1112,8 @@ h6 {
   padding-left: 15px;
   padding-right: 15px; }
 
-.page .entry-content > *:not(.alignfull):not(.alignwide),
+.page .entry-content > *:not(.alignfull):not(.alignwide):not(.pf-content),
+.page .entry-content .pf-content > *:not(.alignfull):not(.alignwide),
 .single .entry-content > *:not(.alignfull):not(.alignwide):not(.pf-content),
 .single .entry-content .pf-content > *:not(.alignfull):not(.alignwide),
 .single-tribe_events .site-inner > .wrap {
@@ -1611,6 +1613,7 @@ input {
   color: #fff;
   display: inline-block;
   font-size: 0.875rem;
+  margin: 5px 0.9375rem 5px 0;
   padding: 0.25rem .75rem;
   text-decoration: none;
   text-transform: uppercase;
@@ -1860,30 +1863,10 @@ input {
 .tribe-common--breakpoint-medium.tribe-events .tribe-events-calendar-list__event-details {
   width: 100%; }
 
-.tribe-events-calendar-list__event-header .categories {
+.tribe-events-calendar-list__event-header .entry-meta {
   display: inline-block;
   margin-right: 0.9375rem;
   margin-bottom: 0.9375rem; }
-  .tribe-events-calendar-list__event-header .categories > div {
-    display: none; }
-  .tribe-events-calendar-list__event-header .categories .tribe-event-categories a {
-    background-color: #393939;
-    background-image: linear-gradient(#fff, #fff);
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-size: 0% 100%;
-    border: 4px solid #393939;
-    color: #fff;
-    display: inline-block;
-    font-size: 0.875rem;
-    margin-right: 0.9375rem;
-    padding: 0.25rem .75rem;
-    text-decoration: none;
-    text-transform: uppercase;
-    transition: all 500ms; }
-    .tribe-events-calendar-list__event-header .categories .tribe-event-categories a:hover, .tribe-events-calendar-list__event-header .categories .tribe-event-categories a:focus {
-      background-size: 100% 100%;
-      color: #393939; }
 
 .tribe-events-calendar-list__event-cost {
   display: inline-block;
