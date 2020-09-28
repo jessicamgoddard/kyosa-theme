@@ -15,6 +15,7 @@ function kyosa_custom_gutenberg_css() {
 
   $css = '';
   $colors = $kyosa_config[ 'theme-supports' ][ 'editor-color-palette' ];
+  $font_sizes = $kyosa_config[ 'theme-supports' ][ 'editor-font-sizes' ];
 
   foreach( $colors as $color ) {
 
@@ -100,6 +101,20 @@ function kyosa_custom_gutenberg_css() {
 
     .has-{$color['slug']}-page-color .wp-block-pandp-blocks-accordion .accordion-trigger::after {
       color: {$color['color']};
+    }
+
+CSS;
+
+  }
+
+  foreach( $font_sizes as $font_size ) {
+
+    $size = $font_size['size'] / 16;
+
+    $css .= <<<CSS
+
+    .has-{$font_size['slug']}-font-size {
+      font-size: {$size}rem;
     }
 
 CSS;

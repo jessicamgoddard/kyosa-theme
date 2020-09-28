@@ -3,7 +3,7 @@ input[type="submit"],
 .button,
 .wp-block-button__link {
   background-color: transparent;
-  border: 3px solid $black;
+  border: 3px solid currentColor;
   border-radius: $px-30-to-rem;
   color: $black;
   cursor: pointer;

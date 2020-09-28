@@ -127,7 +127,7 @@ return [
       [
         'name'  => __( 'Black' ),
         'slug'  => 'black',
-        'color' => '#000000',
+        'color' => '#393939',
       ],
     ]
   ],

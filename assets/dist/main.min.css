@@ -1105,7 +1105,8 @@ h6 {
 .single .entry-content > *:not(.alignfull):not(.pf-content),
 .single .entry-content .pf-content > *:not(.alignfull),
 .alignwide,
-.single-tribe_events .site-inner > .wrap {
+.single-tribe_events .site-inner > .wrap,
+.wp-block-cover.alignfull > .wp-block-cover__inner-container {
   margin-left: auto;
   margin-right: auto;
   max-width: 76.88rem;
@@ -1125,12 +1126,15 @@ h6 {
 .alignright {
   margin-left: 30px; }
 
+.no-bottom-margin {
+  margin-bottom: 0; }
+
 button,
 input[type="submit"],
 .button,
 .wp-block-button__link {
   background-color: transparent;
-  border: 3px solid #393939;
+  border: 3px solid currentColor;
   border-radius: 1.875rem;
   color: #393939;
   cursor: pointer;
@@ -1501,7 +1505,7 @@ input {
 .archive.has-post-thumbnail .archive-description,
 .single.has-post-thumbnail .entry-header {
   position: relative;
-  margin-bottom: 60px; }
+  margin-bottom: 90px; }
   .page.has-post-thumbnail .entry-header .wrap,
   .archive.has-post-thumbnail .archive-description .wrap,
   .single.has-post-thumbnail .entry-header .wrap {
@@ -1525,11 +1529,53 @@ input {
   .page-hero .page-hero__image img {
     display: none; }
 
+.home .entry-header .page-hero .page-hero__image {
+  position: relative; }
+  .home .entry-header .page-hero .page-hero__image::before, .home .entry-header .page-hero .page-hero__image::after {
+    background-color: #393939;
+    content: '';
+    display: block;
+    opacity: .17;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+  .home .entry-header .page-hero .page-hero__image::after {
+    background: linear-gradient(to left, #F1CA4C 0 25%, #337FD0 25% 50%, #D5161D 50% 75%, #679633 75% 100%);
+    background-color: transparent;
+    height: 25px;
+    opacity: 1;
+    top: auto; }
+
+.home .entry-header .page-hero .page-hero__headline {
+  color: #fff;
+  font-family: "Roboto Slab", serif;
+  font-size: 4.375rem;
+  font-size: 2.1875rem;
+  font-weight: 700;
+  line-height: 1;
+  position: absolute;
+  right: 2.5rem;
+  bottom: 40px;
+  left: 2.5rem;
+  text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.43);
+  z-index: 1; }
+
+.home .entry-header > .wrap {
+  display: none; }
+
 @media only screen and (min-width: 76.88rem) {
   .page-hero {
     margin-left: auto;
     margin-right: auto;
-    max-width: calc( 100vw - 300px); } }
+    max-width: calc( 100vw - 300px); }
+  .home .entry-header .page-hero .page-hero__image::after {
+    height: 50px; }
+  .home .entry-header .page-hero .page-hero__headline {
+    font-size: 4.375rem;
+    bottom: 60px;
+    max-width: 50rem; } }
 
 .archive .articles .entry {
   display: flex;
@@ -1812,6 +1858,40 @@ input {
 .is-style-underscore .wp-block-button__link:focus::before {
   bottom: -3px;
   width: 100%; }
+
+.home .mc4wp-form input:not([type="submit"]) {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 3px solid #fff;
+  border-radius: 0;
+  color: #fff;
+  text-transform: capitalize; }
+  .home .mc4wp-form input:not([type="submit"])::placeholder {
+    color: #fff; }
+  .home .mc4wp-form input:not([type="submit"]):-ms-input-placeholder {
+    color: #fff; }
+  .home .mc4wp-form input:not([type="submit"])::-ms-input-placeholder {
+    color: #fff; }
+
+.home .mc4wp-form input[type="submit"] {
+  color: #F1CA4C; }
+  .home .mc4wp-form input[type="submit"]:hover, .home .mc4wp-form input[type="submit"]:focus {
+    background-color: #F1CA4C;
+    border-color: #F1CA4C;
+    color: #393939 !important; }
+
+@media only screen and (min-width: 58.13rem) {
+  .home .mc4wp-form .mc4wp-form-fields {
+    display: flex;
+    flex-wrap: wrap; }
+    .home .mc4wp-form .mc4wp-form-fields > p {
+      margin-right: 30px; }
+    .home .mc4wp-form .mc4wp-form-fields .name {
+      flex-basis: calc(50% - 30px); }
+    .home .mc4wp-form .mc4wp-form-fields .email {
+      flex-basis: 100%; }
+    .home .mc4wp-form .mc4wp-form-fields input {
+      width: 100%; } }
 
 /* The Evens Calendar */
 .event-categories .category-navigation {

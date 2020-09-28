@@ -17,7 +17,7 @@ function kyosa_post_info_filter( $post_info ) {
 
   if( is_singular( 'post' ) ) :
 
-    $post_info = '<div class="entry-meta-container">[post_date] by [post_author]' . do_shortcode( '[printfriendly]' ) . ' [post_edit]</div>';
+    $post_info = '<div class="entry-meta-container">[post_date]&nbsp;by&nbsp;[post_author]' . do_shortcode( '[printfriendly]' ) . ' [post_edit]</div>';
     return $post_info;
 
   endif;

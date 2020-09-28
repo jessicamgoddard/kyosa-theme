@@ -125,7 +125,9 @@ function kyosa_add_page_post_hero_image() {
           </div>
         <?php endif; ?>
 
-        <?= get_the_post_thumbnail() ?>
+        <?php genesis_do_post_image() ?>
+        <? //get_the_post_thumbnail() ?>
+        <?php //genesis_get_image( array( 'format' => 'html', 'size' => genesis_get_option( 'image_size' ), 'attr' => array( 'class' => 'post-image' ) ) ); ?>
       </div>
     </div>
     <?php

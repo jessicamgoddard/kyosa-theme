@@ -1,0 +1,67 @@
+.home .mc4wp-form {
+
+  input:not([type="submit"]) {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 3px solid #fff;
+    border-radius: 0;
+    color: #fff;
+    text-transform: capitalize;
+
+    &::placeholder {
+      color: #fff;
+    }
+
+    &:-ms-input-placeholder {
+      color: #fff;
+    }
+
+    &::-ms-input-placeholder {
+      color: #fff;
+    }
+
+  }
+
+  input[type="submit"] {
+    color: $yellow;
+
+    &:hover,
+    &:focus {
+      background-color: $yellow;
+      border-color: $yellow;
+      color: $black !important;
+    }
+
+  }
+
+}
+
+@media only screen and (min-width:$breakpoint-standard) {
+
+  .home .mc4wp-form {
+
+    .mc4wp-form-fields {
+      display: flex;
+        flex-wrap: wrap;
+
+      & > p {
+        margin-right: 30px;
+      }
+
+      .name {
+        flex-basis: calc(50% - 30px);
+      }
+
+      .email {
+        flex-basis: 100%;
+      }
+
+      input {
+        width: 100%;
+      }
+
+    }
+
+  }
+
+}

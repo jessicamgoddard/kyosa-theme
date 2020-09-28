@@ -173,7 +173,8 @@ h6 {
 .single .entry-content > *:not(.alignfull):not(.pf-content),
 .single .entry-content .pf-content > *:not(.alignfull),
 .alignwide,
-.single-tribe_events .site-inner > .wrap {
+.single-tribe_events .site-inner > .wrap,
+.wp-block-cover.alignfull > .wp-block-cover__inner-container {
   margin-left: auto;
   margin-right: auto;
   max-width: 76.88rem;
@@ -192,6 +193,9 @@ h6 {
 
 .alignright {
   margin-left: 30px; }
+
+.no-bottom-margin {
+  margin-bottom: 0; }
 
 .wp-block-latest-posts {
   padding-left: 0 !important; }
