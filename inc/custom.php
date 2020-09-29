@@ -7,6 +7,16 @@
  * @since        1.0.0
 **/
 
+// Exclude node_modules folders
+add_filter('ai1wm_exclude_content_from_export', function($exclude_filters) {
+
+  $exclude_filters[] = 'themes/kyosa-theme/assets/node_modules';
+  $exclude_filters[] = 'plugins/pandp-blocks/node_modules';
+
+  return $exclude_filters;
+
+});
+
 add_action( 'genesis_after_header', 'kyosa_add_event_categories' );
 function kyosa_add_event_categories() {
 
