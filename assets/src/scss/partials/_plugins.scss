@@ -10,14 +10,17 @@
 
     &::placeholder {
       color: #fff;
+      opacity: 1;
     }
 
     &:-ms-input-placeholder {
       color: #fff;
+      opacity: 1;
     }
 
     &::-ms-input-placeholder {
       color: #fff;
+      opacity: 1;
     }
 
   }

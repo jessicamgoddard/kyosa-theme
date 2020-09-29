@@ -129,7 +129,9 @@
     display: none;
     margin-bottom: $px-15-to-rem;
 
-    &.is-active {
+    &.is-active,
+    &:focus,
+    &:focus-within {
       display: block;
     }
 
@@ -257,13 +259,16 @@
 @media only screen and (min-width: 960px) {
 
   .site-header {
-    padding-bottom: $px-15-to-rem;
-    position: sticky;
-      top: 0;
+    // padding-bottom: $px-15-to-rem;
+    // position: sticky;
+    //   top: 0;
+    position: fixed;
+    width: 100%;
     z-index: 999;
 
     .wrap {
-      transition: all 500ms ease-in-out;
+      padding-bottom: $px-15-to-rem;
+      // transition: all 500ms ease-in-out;
     }
 
     .wrap + .menu-toggle {
@@ -280,6 +285,7 @@
         box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.16);
         opacity: 0;
         transform: translateX(100%);
+        transition: all 500ms ease-in-out;
 
         & + .menu-toggle {
           transform: translateX(0);
@@ -386,7 +392,9 @@
           overflow: hidden;
           width: 0;
 
-          &.is-active {
+          &.is-active,
+          &:focus,
+          &:focus-within {
             width: auto;
           }
 
@@ -419,7 +427,7 @@
             border-bottom: 7px solid $black;
             box-shadow: 5px 5px 3px rgba(0,0,0,.16);
             text-align: left;
-            width: 100%;
+            width: 18.75rem;
 
             .menu-item {
               display: block;
@@ -444,6 +452,10 @@
 
           &.menu-item-has-children span {
             padding-right: 0;
+          }
+
+          &:last-of-type .sub-menu {
+            right: 0;
           }
 
         }

@@ -30,30 +30,31 @@ function kyosa_custom_gutenberg_css() {
     }
 
     /* Button Colors */
-    .wp-block-button__link.has-{$color['slug']}-background-color {
-      background-color: transparent;
-      border-color: {$color['color']};
+    .is-style-outline .wp-block-button__link.has-{$color['slug']}-color,
+    .is-style-underscore .wp-block-button__link.has-{$color['slug']}-color {
+      color: {$color['color']};
     }
 
-    .wp-block-button:not(.is-style-underscore) .wp-block-button__link.has-{$color['slug']}-background-color:hover,
-    .wp-block-button:not(.is-style-underscore) .wp-block-button__link.has-{$color['slug']}-background-color:focus {
+    .is-style-outline .wp-block-button__link.has-{$color['slug']}-background-color {
       background-color: {$color['color']};
     }
 
-    .is-style-underscore .wp-block-button__link.has-{$color['slug']}-color:hover,
-    .is-style-underscore .wp-block-button__link.has-{$color['slug']}-color:focus {
-      color: {$color['color']};
+    .wp-block-button:not(.is-style-outline):not(.is-style-underscore) .wp-block-button__link.has-{$color['slug']}-background-color,
+    .is-style-outline .wp-block-button__link.has-{$color['slug']}-color:hover,
+    .is-style-outline .wp-block-button__link.has-{$color['slug']}-color:focus {
+      background-color: {$color['color']};
+      border-color: {$color['color']};
     }
 
     /* Page Colors */
     .site-header .nav-primary .menu-item.has-{$color['slug']}-page-color a,
-    .footer-widgets .menu .menu-item.has-{$color['slug']}-page-color a {
+    .footer-widgets .menu-primary-menu-container .menu .menu-item.has-{$color['slug']}-page-color a {
       background-image: linear-gradient({$color['color']}, {$color['color']});
     }
 
     .site-header .menu-item.has-{$color['slug']}-page-color a span,
     .site-header .menu-item.has-{$color['slug']}-page-color .sub-menu,
-    .footer-widgets .menu-item.has-{$color['slug']}-page-color a {
+    .footer-widgets .menu-primary-menu-container .menu-item.has-{$color['slug']}-page-color a {
       border-color: {$color['color']} !important;
     }
 
@@ -101,6 +102,16 @@ function kyosa_custom_gutenberg_css() {
 
     .has-{$color['slug']}-page-color .wp-block-pandp-blocks-accordion .accordion-trigger::after {
       color: {$color['color']};
+    }
+
+    /* Editor Overrides */
+    .block-editor .wp-block-button.is-style-outline .wp-block-button__link.has-{$color['slug']}-background-color:hover {
+      background-color: {$color['color']} !important;
+    }
+
+    .block-editor .wp-block-button:not(.is-style-outline):not(.is-style-underscore) .wp-block-button__link.has-{$color['slug']}-background-color,
+    .block-editor .wp-block-button:not(.is-style-outline) .wp-block-button__link.has-{$color['slug']}-background-color {
+      border-color: {$color['color']};
     }
 
 CSS;

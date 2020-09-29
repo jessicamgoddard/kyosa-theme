@@ -282,18 +282,13 @@ h6 {
 .is-style-serif {
   font-family: "Roboto Slab", serif; }
 
-.button,
 .wp-block-button__link {
   background-color: transparent;
-  border: 3px solid #393939;
+  border: 3px solid currentColor;
   border-radius: 1.875rem;
-  color: #393939;
   cursor: pointer;
-  font-weight: 700;
-  transition: all 250ms ease-in-out; }
+  font-weight: 700; }
 
-.button:hover,
-.button:focus,
 .wp-block-button:not(.is-style-underscore) .wp-block-button__link:hover,
 .wp-block-button:not(.is-style-underscore) .wp-block-button__link:focus {
   background-color: #393939;
@@ -316,14 +311,18 @@ h6 {
   transition: all 250ms ease-in-out;
   width: 25px; }
 
-.is-style-underscore .wp-block-button__link:hover,
-.is-style-underscore .wp-block-button__link:focus {
-  color: #393939; }
-
 .is-style-underscore .wp-block-button__link:hover::before,
 .is-style-underscore .wp-block-button__link:focus::before {
   bottom: -3px;
   width: 100%; }
+
+.is-style-underscore .wp-block-button__link,
+.is-style-outline .wp-block-button__link {
+  color: inherit; }
+
+.wp-block-button:not(.is-style-outline):not(.is-style-underscore) .wp-block-button__link {
+  background-color: #393939;
+  border-color: #393939; }
 
 .wp-block {
   max-width: 900px; }

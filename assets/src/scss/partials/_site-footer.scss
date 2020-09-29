@@ -1,5 +1,5 @@
 .footer-widgets {
-  padding: $px-15-to-rem;
+  padding: $px-150-to-rem $px-15-to-rem $px-15-to-rem;
 
   & > .wrap {
     display: flex;
@@ -63,7 +63,8 @@
       }
 
       &:hover a,
-      &:focus a {
+      &:focus a,
+      &.current-menu-item a {
         border-bottom-color: $black;
       }
 

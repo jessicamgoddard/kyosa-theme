@@ -2,13 +2,19 @@
 const setHeroHeight = () => {
 
   const siteHeader = document.querySelector( '.site-header' );
+  // const siteInner = document.querySelector( '.site-inner' );
   const pageHeroImage = document.querySelector( '.page-hero__image' );
+  const headerHeight = siteHeader.offsetHeight;
 
   if( pageHeroImage ) {
 
-    const headerHeight = siteHeader.offsetHeight;
+    pageHeroImage.style.backgroundPositionY = headerHeight + 'px';
 
-    pageHeroImage.style.minHeight = 'calc( 100vh - ' + headerHeight + 'px - 60px )';
+  } else if( headerHeight > 200 ) {
+
+    const entryHeader = document.querySelector( '.content > .entry > .entry-header' );
+
+    entryHeader.style.marginTop = headerHeight + 'px';
 
   }
 
@@ -93,10 +99,12 @@ const menuToggleOnScroll = () => {
     menuToggle.setAttribute( 'aria-expanded', 'false' );
     menuToggle.setAttribute( 'aria-pressed', 'false' );
     siteHeader.appendChild( menuToggle );
+    siteHeaderHeight = siteHeader.offsetHeight;
 
     const toggleMenuToggle = () => {
+      // console.log( 'scrollY: ' + window.scrollY + ' / height: ' + siteHeaderHeight );
       // If the window is scrolled below the site header
-      if( window.scrollY >= siteHeader.offsetHeight ) {
+      if( window.scrollY > siteHeaderHeight ) {
         siteHeader.classList.add( 'is-scrolled' );
       } else {
         siteHeader.classList.remove( 'is-scrolled' );
