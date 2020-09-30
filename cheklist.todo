@@ -148,10 +148,10 @@ Testing:
   ✔ iPhone/Safari @done(2020-09-29 15:21) @project(Testing)
   ✔ iPhone/Chrome @done(2020-09-29 15:21) @project(Testing)
   ✔ Android/Chrome @done(2020-09-29 15:21) @project(Testing)
-  ☐ Revise and re-test
+  ✔ Revise and re-test @done(2020-09-30 09:13) @project(Testing)
 
 Review:
-  ☐ Install WP Feedback
+  ✔ Install WP Feedback @done(2020-09-30 09:13) @project(Review)
   ☐ Revise as necessary
 
 Launch Prep:
