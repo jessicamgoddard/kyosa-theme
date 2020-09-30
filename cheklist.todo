@@ -48,12 +48,6 @@ Theme Setup:
   ✔ Add favicon @done(2020-09-25 12:38) @project(Theme Setup)
   ✔ Set comment preferences @done(2020-09-25 12:39) @project(Theme Setup)
 
-SiteGround Setup:
-  ☐ Create sub-domain
-  ☐ Add SSL certificate
-  ☐ Install WordPress
-  ☐ Disable caching
-
 WordPress Setup:
   ✔ Set blog title and tagline @done(2020-09-25 12:39) @project(WordPress Setup)
   ✔ Set date and time @done(2020-09-25 12:39) @project(WordPress Setup)
@@ -107,8 +101,8 @@ Block Development:
   ✔ Fix any items marked in the code @done(2020-09-28 11:15) @project(Block Development)
 
 Site Build-out:
-  ☐ Create all mock-up pages using blocks
-  ☐ Modify styling as needed
+  ✔ Create all mock-up pages using blocks @done(2020-09-29 16:18) @project(Site Build-out)
+  ✔ Modify styling as needed @done(2020-09-29 16:18) @project(Site Build-out)
   ☐ Add content from client
   ☐ Activate standard plugins
       ☐ Antispam Bee
@@ -148,12 +142,12 @@ Testing:
   ✔ Windows/Firefox @done(2020-09-28 12:46) @project(Testing)
   ✔ Windows/Edge @done(2020-09-28 12:49) @project(Testing)
   ☐ Windows/IE
-  ☐ Mac/Chrome
-  ☐ Mac/Firefox
-  ☐ Mac/Safari
-  ☐ iPhone/Safari
-  ☐ iPhone/Chrome
-  ☐ Android/Chrome
+  ✔ Mac/Chrome @done(2020-09-29 13:22) @project(Testing)
+  ✔ Mac/Firefox @done(2020-09-29 13:22) @project(Testing)
+  ✔ Mac/Safari @done(2020-09-29 13:22) @project(Testing)
+  ✔ iPhone/Safari @done(2020-09-29 15:21) @project(Testing)
+  ✔ iPhone/Chrome @done(2020-09-29 15:21) @project(Testing)
+  ✔ Android/Chrome @done(2020-09-29 15:21) @project(Testing)
   ☐ Revise and re-test
 
 Review:

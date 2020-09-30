@@ -100,6 +100,14 @@
 
 }
 
+@media only screen and (max-width: $breakpoint-wide) {
+
+  .page-hero .page-hero__image {
+    background-position-y: center !important;
+  }
+
+}
+
 @media only screen and (min-width: $breakpoint-wide) {
 
   .page-hero {

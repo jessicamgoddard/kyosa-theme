@@ -266,3 +266,19 @@
 .tribe-events-nav-pagination .tribe-events-nav-next {
   text-align: right;
 }
+
+@media only screen and (max-width:$breakpoint-standard) {
+
+  .tribe-events .tribe-events-calendar-list__event-row {
+    flex-wrap: wrap;
+  }
+
+  .tribe-events .tribe-events-calendar-list__event-wrapper {
+    flex-basis: 100%;
+  }
+
+  .single-tribe_events #tribe-events-footer li {
+    width: 100%;
+  }
+
+}

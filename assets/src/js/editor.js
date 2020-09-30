@@ -4,7 +4,10 @@ wp.domReady( () => {
   const { __ } = wp.i18n;
   const { registerBlockStyle, unregisterBlockStyle } = wp.blocks;
 
-  // unregisterBlockStyle( 'core/button', 'outline' );
+  registerBlockStyle( 'core/heading', {
+    name: 'underline',
+    label: 'Underline',
+  } );
 
   registerBlockStyle( 'core/button', {
     name: 'underscore',

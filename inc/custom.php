@@ -17,6 +17,7 @@ add_filter('ai1wm_exclude_content_from_export', function($exclude_filters) {
 
 });
 
+// Add event categories
 add_action( 'genesis_after_header', 'kyosa_add_event_categories' );
 function kyosa_add_event_categories() {
 
@@ -44,7 +45,7 @@ function kyosa_add_event_categories() {
   				<?php
   				foreach( $cats as $cat ) :
   					$menu_item_class = 'menu-item';
-  					if( $cat->term_id === $current_cat->term_id ) :
+  					if( is_tax() && $cat->term_id === $current_cat->term_id ) :
   						$menu_item_class .= ' current-menu-item';
   					endif;
   					?>
@@ -169,7 +170,7 @@ function kyosa_page_color_body_class( $classes ) {
     $classes[] = 'has-post-thumbnail';
   endif;
 
-  if( get_field( 'color', 'tribe_events_cat_' . get_queried_object()->term_id ) ) :
+  if( is_tax() && get_field( 'color', 'tribe_events_cat_' . get_queried_object()->term_id ) ) :
     $classes[] = 'has-' . get_field( 'color', 'tribe_events_cat_' . get_queried_object()->term_id ) . '-category-color';
   endif;
 

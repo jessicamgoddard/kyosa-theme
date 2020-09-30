@@ -30,23 +30,23 @@ h6 {
 }
 
 h1 {
-  font-size: $font-size-h1;
+  font-size: $font-size-mobile-h1;
 }
 
 h2 {
-  font-size: $font-size-h2;
+  font-size: $font-size-mobile-h2;
 }
 
 h3 {
-  font-size: $font-size-h3;
+  font-size: $font-size-mobile-h3;
 }
 
 h4 {
-  font-size: $font-size-h4;
+  font-size: $font-size-mobile-h4;
 }
 
 h5 {
-  font-size: $font-size-h5;
+  font-size: $font-size-mobile-h5;
 }
 
 h6 {
@@ -67,6 +67,11 @@ h6 {
   padding-right: 15px;
 }
 
+.wp-block-cover.alignfull > .wp-block-cover__inner-container {
+  padding: 0;
+  width: auto;
+}
+
 .page .entry-content > *:not(.alignfull):not(.alignwide):not(.pf-content),
 .page .entry-content .pf-content > *:not(.alignfull):not(.alignwide),
 .single .entry-content > *:not(.alignfull):not(.alignwide):not(.pf-content),
@@ -85,4 +90,28 @@ h6 {
 
 .no-bottom-margin {
   margin-bottom: 0;
+}
+
+@media only screen and (min-width: $breakpoint-standard) {
+
+  h1 {
+    font-size: $font-size-h1;
+  }
+
+  h2 {
+    font-size: $font-size-h2;
+  }
+
+  h3 {
+    font-size: $font-size-h3;
+  }
+
+  h4 {
+    font-size: $font-size-h4;
+  }
+
+  h5 {
+    font-size: $font-size-h5;
+  }
+
 }

@@ -48,6 +48,7 @@ function kyosa_custom_gutenberg_css() {
 
     /* Page Colors */
     .site-header .nav-primary .menu-item.has-{$color['slug']}-page-color a,
+    .site-header .genesis-responsive-menu .menu-item.moved-item-nav-primary.has-{$color['slug']}-page-color a,
     .footer-widgets .menu-primary-menu-container .menu .menu-item.has-{$color['slug']}-page-color a {
       background-image: linear-gradient({$color['color']}, {$color['color']});
     }
@@ -84,9 +85,8 @@ function kyosa_custom_gutenberg_css() {
     }
 
     /* Heading Underline Block */
-    .has-{$color['slug']}-underline-color::after,
-    .has-{$color['slug']}-underline-color .rich-text::after {
-      background-color: {$color['color']};
+    .is-style-underline.has-{$color['slug']}-background-color::after {
+      background: {$color['color']} !important;
     }
 
     /* Accordion Block */

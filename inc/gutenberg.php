@@ -35,15 +35,3 @@ function kyosa_blocks_body_classes( $classes ) {
 	return $classes;
 
 }
-
-// Unregisters default WP block patterns
-unregister_block_pattern( 'core/heading-paragraph' );
-unregister_block_pattern( 'core/large-header-button' );
-unregister_block_pattern( 'core/large-header' );
-unregister_block_pattern( 'core/quote' );
-unregister_block_pattern( 'core/text-three-columns-buttons' );
-unregister_block_pattern( 'core/text-two-columns-with-images' );
-unregister_block_pattern( 'core/text-two-columns' );
-unregister_block_pattern( 'core/three-buttons' );
-unregister_block_pattern( 'core/two-buttons' );
-unregister_block_pattern( 'core/two-images' );

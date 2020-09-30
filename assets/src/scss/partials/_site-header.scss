@@ -1,8 +1,8 @@
-.site-header .wrap {
+.site-header > .wrap {
   background-color: #fff;
   margin: 0;
   max-width: unset;
-  padding: 15px;;
+  padding: 15px 15px 30px;
 
   .title-area {
     float: left;
@@ -58,7 +58,7 @@
 }
 
 .admin-bar .nav-secondary {
-  top: 115px !important;
+  padding-top: 115px !important;
 }
 
 /* Shared menu styles */
@@ -82,8 +82,9 @@
 .site-header .nav-secondary {
   background-color: #fff;
   overflow: auto;
+  padding-top: 85px;
   position: fixed;
-    top: 85px;
+    top: 0;
     left: 0;
     bottom: 0;
   z-index: 998;
@@ -205,6 +206,10 @@
 
   }
 
+  &:focus > a {
+    transition: none;
+  }
+
   &.menu-item-has-children a span {
     padding-right: $px-15-to-rem;
   }
@@ -279,10 +284,10 @@
     }
 
     &.is-scrolled {
+      box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.16);
       overflow: hidden;
 
       & > .wrap {
-        box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.16);
         opacity: 0;
         transform: translateX(100%);
         transition: all 500ms ease-in-out;
@@ -339,7 +344,7 @@
   }
 
   .admin-bar .nav-secondary {
-    top: 0 !important;
+    padding-top: 0 !important;
   }
 
   .site-header > .wrap {
@@ -365,8 +370,8 @@
     .nav-secondary {
       margin-bottom: $px-30-to-rem;
       overflow: visible;
+      padding-top: 0;
       position: relative;
-        top: 0;
 
       .menu {
         align-items: flex-end;

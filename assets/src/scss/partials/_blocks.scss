@@ -186,3 +186,38 @@
   background-color: $black;
   border-color: $black;
 }
+
+.is-style-underline {
+  background-color: transparent !important;
+  display: flex;
+    flex-direction: column;
+
+  &.rich-text {
+    display: flex;
+      flex-direction: column;
+  }
+
+  &.has-background {
+    padding: 0;
+  }
+
+  &::after {
+    background: linear-gradient( to left, #F1CA4C 0 25%, #337FD0 25% 50%, #D5161D 50% 75%, #679633 75% 100% );
+    display: block;
+    content: '';
+    height: 7px;
+    margin-top: .25em;
+    position: relative;
+    width: 100%;
+    max-width: 200px;
+  }
+
+  &.has-text-align-center {
+    align-items: center;
+  }
+
+  &.has-text-align-right {
+    align-items: flex-end;
+  }
+
+}
